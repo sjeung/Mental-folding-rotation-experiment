@@ -1,6 +1,9 @@
   function mfold_Main
 %%  Mental folding experiment.
-%  HELP!                                    
+% Handed down from Chris Hilton, Leonie Raddatz, Benjamin Paulisch but the
+% origianl creator is not exactly known 
+%--------------------------------------------------------------------------
+% Modified by seinjeung@gmail.com 2025                                    
 
                               
 %% Preparation
