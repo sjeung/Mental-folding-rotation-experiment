@@ -4,9 +4,7 @@
 
                               
 %% Preparation
-clear all;
 sca;            %Screen('CloseAll') from PsychToolbox (PTB)
-clc;            %clear Matlab output
 rng('default')  %reset random number generator
 rng('shuffle')
 
