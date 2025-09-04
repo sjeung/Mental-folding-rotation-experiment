@@ -2,15 +2,15 @@ function mfold_Preferences
 
 global data;    %get global data var
 
-
+screens = Screen('Screens'); 
 %% get/set screen parameters and open window
 % screen selection and proportions
 if numel(Screen('Screens'))>1   %if more than one display exists (which should be avoided)...
-    data.prefs.screen.whichScreen = 1;  %select display 1 (usually the main display on Windows; vs. 2; 0 might be the extended desktop leading to severe format and timing issues)
+    data.prefs.screen.whichScreen = max(screens);  %select display 1 (usually the main display on Windows; vs. 2; 0 might be the extended desktop leading to severe format and timing issues)
 else
     data.prefs.screen.whichScreen = 0;  %display 0 is the only one existing
 end
-data.prefs.screen.scrsz = get(data.prefs.screen.whichScreen,'ScreenSize');
+data.prefs.screen.scrsz = Screen('Rect', data.prefs.screen.whichScreen);
 data.prefs.screen.center = data.prefs.screen.scrsz(3:4)/2;
 
 %open the window
