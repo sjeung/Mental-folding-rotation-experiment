@@ -1,0 +1,850 @@
+  1	   0.007	101	measurement:start;
+  2	   1.062	111	block_start:1;
+  3	   2.076	201	trial_number_absolut:1;trial_number_block:1;
+  4	   2.114	211	screen:fixation_cross;
+  5	   2.118	39	pairing_selection
+  6	   2.867	235	reference_level:3;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+  7	   3.863	221	target_level:3;target_figure:150;target_arrow_position:a;presentation_side:left;
+  8	   4.561	241	pairing:match;response:same;response_evaluation:correct;rt:668;
+  9	   4.579	251	screen:blank;
+ 10	   5.583	201	trial_number_absolut:2;trial_number_block:2;
+ 11	   5.613	211	screen:fixation_cross;
+ 12	   5.616	109	pairing_selection
+ 13	   6.379	233	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+ 14	   7.379	225	target_level:1;target_figure:150;target_arrow_position:y;presentation_side:right;
+ 15	   8.631	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1219;
+ 16	   8.646	251	screen:blank;
+ 17	   9.649	201	trial_number_absolut:3;trial_number_block:3;
+ 18	   9.679	211	screen:fixation_cross;
+ 19	   9.682	29	pairing_selection
+ 20	  10.729	231	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+ 21	  11.729	225	target_level:2;target_figure:101;target_arrow_position:b;presentation_side:right;
+ 22	  13.121	241	pairing:match;response:same;response_evaluation:correct;rt:1363;
+ 23	  13.129	251	screen:blank;
+ 24	  14.132	201	trial_number_absolut:4;trial_number_block:4;
+ 25	  14.162	211	screen:fixation_cross;
+ 26	  14.165	105	pairing_selection
+ 27	  15.329	233	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+ 28	  16.329	225	target_level:1;target_figure:101;target_arrow_position:x;presentation_side:right;
+ 29	  17.333	241	pairing:mismatch;response:different;response_evaluation:correct;rt:971;
+ 30	  17.345	251	screen:blank;
+ 31	  18.350	201	trial_number_absolut:5;trial_number_block:5;
+ 32	  18.396	211	screen:fixation_cross;
+ 33	  18.399	165	pairing_selection
+ 34	  19.263	233	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+ 35	  20.263	225	target_level:4;target_figure:101;target_arrow_position:b;presentation_side:right;
+ 36	  21.769	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1461;
+ 37	  21.779	251	screen:blank;
+ 38	  22.785	201	trial_number_absolut:6;trial_number_block:6;
+ 39	  22.812	211	screen:fixation_cross;
+ 40	  22.815	8	pairing_selection
+ 41	  23.912	235	reference_level:1;reference_figure:000;reference_arrow_position:y;presentation_side:right;
+ 42	  24.912	221	target_level:1;target_figure:100;target_arrow_position:y;presentation_side:left;
+ 43	  25.402	241	pairing:match;response:same;response_evaluation:correct;rt:469;
+ 44	  25.412	251	screen:blank;
+ 45	  26.415	201	trial_number_absolut:7;trial_number_block:7;
+ 46	  26.445	211	screen:fixation_cross;
+ 47	  26.448	9	pairing_selection
+ 48	  26.962	235	reference_level:1;reference_figure:000;reference_arrow_position:y;presentation_side:right;
+ 49	  27.962	221	target_level:1;target_figure:150;target_arrow_position:y;presentation_side:left;
+ 50	  28.431	241	pairing:match;response:same;response_evaluation:correct;rt:441;
+ 51	  28.445	251	screen:blank;
+ 52	  29.448	201	trial_number_absolut:8;trial_number_block:8;
+ 53	  29.479	211	screen:fixation_cross;
+ 54	  29.481	16	pairing_selection
+ 55	  30.995	231	reference_level:1;reference_figure:000;reference_arrow_position:z;presentation_side:left;
+ 56	  31.995	225	target_level:1;target_figure:051;target_arrow_position:z;presentation_side:right;
+ 57	  32.422	241	pairing:match;response:same;response_evaluation:correct;rt:391;
+ 58	  32.428	251	screen:blank;
+ 59	  33.431	201	trial_number_absolut:9;trial_number_block:9;
+ 60	  33.462	211	screen:fixation_cross;
+ 61	  33.465	65	pairing_selection
+ 62	  34.012	235	reference_level:4;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+ 63	  35.012	221	target_level:4;target_figure:101;target_arrow_position:b;presentation_side:left;
+ 64	  36.016	240	pairing:match;response:different;response_evaluation:false;rt:964;
+ 65	  36.028	251	screen:blank;
+ 66	  37.032	201	trial_number_absolut:10;trial_number_block:10;
+ 67	  37.062	211	screen:fixation_cross;
+ 68	  37.064	146	pairing_selection
+ 69	  37.679	237	reference_level:3;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+ 70	  38.679	221	target_level:3;target_figure:051;target_arrow_position:b;presentation_side:left;
+ 71	  39.527	241	pairing:mismatch;response:different;response_evaluation:correct;rt:812;
+ 72	  39.545	251	screen:blank;
+ 73	  40.548	201	trial_number_absolut:11;trial_number_block:11;
+ 74	  40.578	211	screen:fixation_cross;
+ 75	  40.581	57	pairing_selection
+ 76	  41.829	235	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+ 77	  42.828	221	target_level:4;target_figure:150;target_arrow_position:a;presentation_side:left;
+ 78	  43.498	241	pairing:match;response:same;response_evaluation:correct;rt:634;
+ 79	  43.512	251	screen:blank;
+ 80	  44.514	201	trial_number_absolut:12;trial_number_block:12;
+ 81	  44.545	211	screen:fixation_cross;
+ 82	  44.548	124	pairing_selection
+ 83	  45.612	233	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+ 84	  46.612	225	target_level:2;target_figure:151;target_arrow_position:a;presentation_side:right;
+ 85	  47.609	241	pairing:mismatch;response:different;response_evaluation:correct;rt:958;
+ 86	  47.628	251	screen:blank;
+ 87	  48.631	201	trial_number_absolut:13;trial_number_block:13;
+ 88	  48.662	211	screen:fixation_cross;
+ 89	  48.664	2	pairing_selection
+ 90	  49.478	235	reference_level:1;reference_figure:000;reference_arrow_position:x;presentation_side:right;
+ 91	  50.478	221	target_level:1;target_figure:100;target_arrow_position:x;presentation_side:left;
+ 92	  51.220	241	pairing:match;response:same;response_evaluation:correct;rt:714;
+ 93	  51.228	251	screen:blank;
+ 94	  52.231	201	trial_number_absolut:14;trial_number_block:14;
+ 95	  52.262	211	screen:fixation_cross;
+ 96	  52.264	52	pairing_selection
+ 97	  53.178	235	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+ 98	  54.178	221	target_level:3;target_figure:051;target_arrow_position:c;presentation_side:left;
+ 99	  55.331	241	pairing:match;response:same;response_evaluation:correct;rt:1118;
+100	  55.345	251	screen:blank;
+101	  56.347	201	trial_number_absolut:15;trial_number_block:15;
+102	  56.378	211	screen:fixation_cross;
+103	  56.381	6	pairing_selection
+104	  57.445	235	reference_level:1;reference_figure:000;reference_arrow_position:x;presentation_side:right;
+105	  58.445	221	target_level:1;target_figure:151;target_arrow_position:x;presentation_side:left;
+106	  59.327	241	pairing:match;response:same;response_evaluation:correct;rt:856;
+107	  59.345	251	screen:blank;
+108	  60.347	201	trial_number_absolut:16;trial_number_block:16;
+109	  60.378	211	screen:fixation_cross;
+110	  60.381	170	pairing_selection
+111	  61.278	237	reference_level:4;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+112	  62.278	221	target_level:4;target_figure:051;target_arrow_position:c;presentation_side:left;
+113	  64.377	241	pairing:mismatch;response:different;response_evaluation:correct;rt:2070;
+114	  64.394	251	screen:blank;
+115	  65.397	201	trial_number_absolut:17;trial_number_block:17;
+116	  65.428	211	screen:fixation_cross;
+117	  65.430	49	pairing_selection
+118	  66.561	231	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+119	  67.561	225	target_level:3;target_figure:050;target_arrow_position:c;presentation_side:right;
+120	  68.349	241	pairing:match;response:same;response_evaluation:correct;rt:746;
+121	  68.361	251	screen:blank;
+122	  69.364	201	trial_number_absolut:18;trial_number_block:18;
+123	  69.395	211	screen:fixation_cross;
+124	  69.397	33	pairing_selection
+125	  70.145	231	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+126	  71.145	225	target_level:2;target_figure:150;target_arrow_position:c;presentation_side:right;
+127	  72.599	241	pairing:match;response:same;response_evaluation:correct;rt:1430;
+128	  72.611	251	screen:blank;
+129	  73.614	201	trial_number_absolut:19;trial_number_block:19;
+130	  73.644	211	screen:fixation_cross;
+131	  73.647	34	pairing_selection
+132	  74.478	235	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+133	  75.478	221	target_level:2;target_figure:051;target_arrow_position:c;presentation_side:left;
+134	  76.169	241	pairing:match;response:same;response_evaluation:correct;rt:648;
+135	  76.178	251	screen:blank;
+136	  77.180	201	trial_number_absolut:20;trial_number_block:20;
+137	  77.211	211	screen:fixation_cross;
+138	  77.214	67	pairing_selection
+139	  78.544	235	reference_level:4;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+140	  79.544	221	target_level:4;target_figure:050;target_arrow_position:c;presentation_side:left;
+141	  80.450	241	pairing:match;response:same;response_evaluation:correct;rt:869;
+142	  80.461	251	screen:blank;
+143	  81.464	201	trial_number_absolut:21;trial_number_block:21;
+144	  81.494	211	screen:fixation_cross;
+145	  81.497	147	pairing_selection
+146	  82.328	237	reference_level:3;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+147	  83.328	221	target_level:3;target_figure:101;target_arrow_position:b;presentation_side:left;
+148	  84.220	241	pairing:mismatch;response:different;response_evaluation:correct;rt:847;
+149	  84.227	251	screen:blank;
+150	  85.230	201	trial_number_absolut:22;trial_number_block:22;
+151	  85.261	211	screen:fixation_cross;
+152	  85.263	36	pairing_selection
+153	  86.528	231	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+154	  87.528	225	target_level:2;target_figure:151;target_arrow_position:c;presentation_side:right;
+155	  88.209	241	pairing:match;response:same;response_evaluation:correct;rt:647;
+156	  88.227	251	screen:blank;
+157	  89.230	201	trial_number_absolut:23;trial_number_block:23;
+158	  89.261	211	screen:fixation_cross;
+159	  89.263	54	pairing_selection
+160	  90.161	231	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+161	  91.161	225	target_level:3;target_figure:151;target_arrow_position:c;presentation_side:right;
+162	  91.844	241	pairing:match;response:same;response_evaluation:correct;rt:654;
+163	  91.861	251	screen:blank;
+164	  92.863	201	trial_number_absolut:24;trial_number_block:24;
+165	  92.894	211	screen:fixation_cross;
+166	  92.897	42	pairing_selection
+167	  94.061	235	reference_level:3;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+168	  95.061	221	target_level:3;target_figure:151;target_arrow_position:a;presentation_side:left;
+169	  95.616	241	pairing:match;response:same;response_evaluation:correct;rt:523;
+170	  95.627	251	screen:blank;
+171	  96.630	201	trial_number_absolut:25;trial_number_block:25;
+172	  96.661	211	screen:fixation_cross;
+173	  96.663	53	pairing_selection
+174	  97.394	235	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+175	  98.394	221	target_level:3;target_figure:101;target_arrow_position:c;presentation_side:left;
+176	  99.087	241	pairing:match;response:same;response_evaluation:correct;rt:664;
+177	  99.094	251	screen:blank;
+178	 100.097	201	trial_number_absolut:26;trial_number_block:26;
+179	 100.127	211	screen:fixation_cross;
+180	 100.130	24	pairing_selection
+181	 101.444	231	reference_level:2;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+182	 102.444	225	target_level:2;target_figure:151;target_arrow_position:a;presentation_side:right;
+183	 103.097	241	pairing:match;response:same;response_evaluation:correct;rt:610;
+184	 103.110	251	screen:blank;
+185	 104.113	201	trial_number_absolut:27;trial_number_block:27;
+186	 104.144	211	screen:fixation_cross;
+187	 104.147	58	pairing_selection
+188	 105.244	231	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+189	 106.244	225	target_level:4;target_figure:051;target_arrow_position:a;presentation_side:right;
+190	 106.966	241	pairing:match;response:same;response_evaluation:correct;rt:680;
+191	 106.977	251	screen:blank;
+192	 107.980	201	trial_number_absolut:28;trial_number_block:28;
+193	 108.010	211	screen:fixation_cross;
+194	 108.013	132	pairing_selection
+195	 108.627	237	reference_level:2;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+196	 109.627	221	target_level:2;target_figure:100;target_arrow_position:c;presentation_side:left;
+197	 110.676	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1028;
+198	 110.694	251	screen:blank;
+199	 111.696	201	trial_number_absolut:29;trial_number_block:29;
+200	 111.727	211	screen:fixation_cross;
+201	 111.730	131	pairing_selection
+202	 112.294	233	reference_level:2;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+203	 113.294	225	target_level:2;target_figure:050;target_arrow_position:c;presentation_side:right;
+204	 114.586	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1270;
+205	 114.593	251	screen:blank;
+206	 115.597	201	trial_number_absolut:30;trial_number_block:30;
+207	 115.627	211	screen:fixation_cross;
+208	 115.630	40	pairing_selection
+209	 116.994	231	reference_level:3;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+210	 117.994	225	target_level:3;target_figure:051;target_arrow_position:a;presentation_side:right;
+211	 118.459	241	pairing:match;response:same;response_evaluation:correct;rt:433;
+212	 118.477	251	screen:blank;
+213	 119.480	201	trial_number_absolut:31;trial_number_block:31;
+214	 119.510	211	screen:fixation_cross;
+215	 119.512	60	pairing_selection
+216	 120.527	231	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+217	 121.527	225	target_level:4;target_figure:151;target_arrow_position:a;presentation_side:right;
+218	 122.549	241	pairing:match;response:same;response_evaluation:correct;rt:986;
+219	 122.560	251	screen:blank;
+220	 123.563	201	trial_number_absolut:32;trial_number_block:32;
+221	 123.593	211	screen:fixation_cross;
+222	 123.596	21	pairing_selection
+223	 124.177	231	reference_level:2;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+224	 125.177	225	target_level:2;target_figure:150;target_arrow_position:a;presentation_side:right;
+225	 125.812	241	pairing:match;response:same;response_evaluation:correct;rt:611;
+226	 125.827	251	screen:blank;
+227	 126.829	201	trial_number_absolut:33;trial_number_block:33;
+228	 126.860	211	screen:fixation_cross;
+229	 126.863	15	pairing_selection
+230	 127.827	235	reference_level:1;reference_figure:000;reference_arrow_position:z;presentation_side:right;
+231	 128.827	221	target_level:1;target_figure:150;target_arrow_position:z;presentation_side:left;
+232	 129.421	241	pairing:match;response:same;response_evaluation:correct;rt:553;
+233	 129.426	251	screen:blank;
+234	 130.429	201	trial_number_absolut:34;trial_number_block:34;
+235	 130.460	211	screen:fixation_cross;
+236	 130.462	44	pairing_selection
+237	 131.760	235	reference_level:3;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+238	 132.760	221	target_level:3;target_figure:100;target_arrow_position:b;presentation_side:left;
+239	 134.672	241	pairing:match;response:same;response_evaluation:correct;rt:1891;
+240	 134.676	251	screen:blank;
+241	 135.678	201	trial_number_absolut:35;trial_number_block:35;
+242	 135.710	211	screen:fixation_cross;
+243	 135.712	129	pairing_selection
+244	 136.360	237	reference_level:2;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+245	 137.360	221	target_level:2;target_figure:101;target_arrow_position:b;presentation_side:left;
+246	 138.722	240	pairing:mismatch;response:same;response_evaluation:false;rt:1340;
+247	 138.726	251	screen:blank;
+248	 139.728	201	trial_number_absolut:36;trial_number_block:36;
+249	 139.760	211	screen:fixation_cross;
+250	 139.762	108	pairing_selection
+251	 140.777	233	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+252	 141.776	225	target_level:1;target_figure:100;target_arrow_position:y;presentation_side:right;
+253	 142.712	241	pairing:mismatch;response:different;response_evaluation:correct;rt:905;
+254	 142.726	251	screen:blank;
+255	 143.729	201	trial_number_absolut:37;trial_number_block:37;
+256	 143.760	211	screen:fixation_cross;
+257	 143.762	136	pairing_selection
+258	 144.576	233	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+259	 145.576	225	target_level:2;target_figure:151;target_arrow_position:c;presentation_side:right;
+260	 146.983	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1377;
+261	 146.993	251	screen:blank;
+262	 147.995	201	trial_number_absolut:38;trial_number_block:38;
+263	 148.026	211	screen:fixation_cross;
+264	 148.029	43	pairing_selection
+265	 149.226	231	reference_level:3;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+266	 150.226	225	target_level:3;target_figure:050;target_arrow_position:b;presentation_side:right;
+267	 151.375	241	pairing:match;response:same;response_evaluation:correct;rt:1104;
+268	 151.393	251	screen:blank;
+269	 152.395	201	trial_number_absolut:39;trial_number_block:39;
+270	 152.426	211	screen:fixation_cross;
+271	 152.428	66	pairing_selection
+272	 153.210	235	reference_level:4;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+273	 154.210	221	target_level:4;target_figure:151;target_arrow_position:b;presentation_side:left;
+274	 156.165	241	pairing:match;response:same;response_evaluation:correct;rt:1916;
+275	 156.176	251	screen:blank;
+276	 157.179	201	trial_number_absolut:40;trial_number_block:40;
+277	 157.209	211	screen:fixation_cross;
+278	 157.212	153	pairing_selection
+279	 158.443	237	reference_level:3;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+280	 159.443	221	target_level:3;target_figure:101;target_arrow_position:c;presentation_side:left;
+281	 160.957	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1488;
+282	 160.976	251	screen:blank;
+283	 161.979	201	trial_number_absolut:41;trial_number_block:41;
+284	 162.009	211	screen:fixation_cross;
+285	 162.012	30	pairing_selection
+286	 163.259	235	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+287	 164.259	221	target_level:2;target_figure:151;target_arrow_position:b;presentation_side:left;
+288	 165.267	241	pairing:match;response:same;response_evaluation:correct;rt:971;
+289	 165.276	251	screen:blank;
+290	 166.278	201	trial_number_absolut:42;trial_number_block:42;
+291	 166.309	211	screen:fixation_cross;
+292	 166.312	119	pairing_selection
+293	 167.593	237	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+294	 168.593	221	target_level:2;target_figure:050;target_arrow_position:a;presentation_side:left;
+295	 169.758	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1141;
+296	 169.776	251	screen:blank;
+297	 170.778	201	trial_number_absolut:43;trial_number_block:43;
+298	 170.809	211	screen:fixation_cross;
+299	 170.812	18	pairing_selection
+300	 172.243	231	reference_level:1;reference_figure:000;reference_arrow_position:z;presentation_side:left;
+301	 173.243	225	target_level:1;target_figure:151;target_arrow_position:z;presentation_side:right;
+302	 173.610	241	pairing:match;response:same;response_evaluation:correct;rt:331;
+303	 173.626	251	screen:blank;
+304	 174.628	201	trial_number_absolut:44;trial_number_block:44;
+305	 174.659	211	screen:fixation_cross;
+306	 174.662	111	pairing_selection
+307	 175.376	237	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+308	 176.376	221	target_level:1;target_figure:101;target_arrow_position:y;presentation_side:left;
+309	 177.600	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1200;
+310	 177.609	251	screen:blank;
+311	 178.612	201	trial_number_absolut:45;trial_number_block:45;
+312	 178.642	211	screen:fixation_cross;
+313	 178.645	160	pairing_selection
+314	 179.926	233	reference_level:4;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+315	 180.926	225	target_level:4;target_figure:151;target_arrow_position:a;presentation_side:right;
+316	 182.249	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1277;
+317	 182.259	251	screen:blank;
+318	 183.261	201	trial_number_absolut:46;trial_number_block:46;
+319	 183.292	211	screen:fixation_cross;
+320	 183.295	155	pairing_selection
+321	 183.942	233	reference_level:4;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+322	 184.942	225	target_level:4;target_figure:050;target_arrow_position:a;presentation_side:right;
+323	 186.904	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1917;
+324	 186.908	251	screen:blank;
+325	 187.911	201	trial_number_absolut:47;trial_number_block:47;
+326	 187.942	211	screen:fixation_cross;
+327	 187.945	69	pairing_selection
+328	 188.892	235	reference_level:4;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+329	 189.892	221	target_level:4;target_figure:150;target_arrow_position:c;presentation_side:left;
+330	 191.876	241	pairing:match;response:same;response_evaluation:correct;rt:1941;
+331	 191.892	251	screen:blank;
+332	 192.895	201	trial_number_absolut:48;trial_number_block:48;
+333	 192.925	211	screen:fixation_cross;
+334	 192.928	25	pairing_selection
+335	 193.459	235	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+336	 194.459	221	target_level:2;target_figure:050;target_arrow_position:b;presentation_side:left;
+337	 195.765	241	pairing:match;response:same;response_evaluation:correct;rt:1279;
+338	 195.775	251	screen:blank;
+339	 196.778	201	trial_number_absolut:49;trial_number_block:49;
+340	 196.809	211	screen:fixation_cross;
+341	 196.811	103	pairing_selection
+342	 198.159	233	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+343	 199.159	225	target_level:1;target_figure:150;target_arrow_position:x;presentation_side:right;
+344	 200.242	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1043;
+345	 200.258	251	screen:blank;
+346	 201.261	201	trial_number_absolut:50;trial_number_block:50;
+347	 201.292	211	screen:fixation_cross;
+348	 201.295	7	pairing_selection
+349	 202.676	235	reference_level:1;reference_figure:000;reference_arrow_position:y;presentation_side:right;
+350	 203.675	221	target_level:1;target_figure:050;target_arrow_position:y;presentation_side:left;
+351	 204.138	241	pairing:match;response:same;response_evaluation:correct;rt:435;
+352	 204.158	251	screen:blank;
+353	 205.161	201	trial_number_absolut:51;trial_number_block:51;
+354	 205.192	211	screen:fixation_cross;
+355	 205.194	114	pairing_selection
+356	 206.275	233	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+357	 207.275	225	target_level:1;target_figure:100;target_arrow_position:z;presentation_side:right;
+358	 207.990	241	pairing:mismatch;response:different;response_evaluation:correct;rt:697;
+359	 208.008	251	screen:blank;
+360	 209.011	201	trial_number_absolut:52;trial_number_block:52;
+361	 209.042	211	screen:fixation_cross;
+362	 209.044	37	pairing_selection
+363	 210.542	231	reference_level:3;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+364	 211.542	225	target_level:3;target_figure:050;target_arrow_position:a;presentation_side:right;
+365	 212.040	241	pairing:match;response:same;response_evaluation:correct;rt:476;
+366	 212.058	251	screen:blank;
+367	 213.061	201	trial_number_absolut:53;trial_number_block:53;
+368	 213.092	211	screen:fixation_cross;
+369	 213.094	140	pairing_selection
+370	 214.125	233	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+371	 215.125	225	target_level:3;target_figure:051;target_arrow_position:a;presentation_side:right;
+372	 216.070	241	pairing:mismatch;response:different;response_evaluation:correct;rt:915;
+373	 216.074	251	screen:blank;
+374	 217.077	201	trial_number_absolut:54;trial_number_block:54;
+375	 217.108	211	screen:fixation_cross;
+376	 217.111	166	pairing_selection
+377	 218.475	237	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+378	 219.475	221	target_level:4;target_figure:151;target_arrow_position:b;presentation_side:left;
+379	 221.363	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1860;
+380	 221.375	251	screen:blank;
+381	 222.377	201	trial_number_absolut:55;trial_number_block:55;
+382	 222.408	211	screen:fixation_cross;
+383	 222.411	46	pairing_selection
+384	 222.925	235	reference_level:3;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+385	 223.925	221	target_level:3;target_figure:051;target_arrow_position:b;presentation_side:left;
+386	 225.953	241	pairing:match;response:same;response_evaluation:correct;rt:1998;
+387	 225.958	251	screen:blank;
+388	 226.960	201	trial_number_absolut:56;trial_number_block:56;
+389	 226.991	211	screen:fixation_cross;
+390	 226.994	143	pairing_selection
+391	 227.841	237	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+392	 228.841	221	target_level:3;target_figure:050;target_arrow_position:b;presentation_side:left;
+393	 231.365	241	pairing:mismatch;response:different;response_evaluation:correct;rt:2493;
+394	 231.374	251	screen:blank;
+395	 232.377	201	trial_number_absolut:57;trial_number_block:57;
+396	 232.408	211	screen:fixation_cross;
+397	 232.410	110	pairing_selection
+398	 233.825	237	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+399	 234.825	221	target_level:1;target_figure:051;target_arrow_position:y;presentation_side:left;
+400	 235.758	241	pairing:mismatch;response:different;response_evaluation:correct;rt:898;
+401	 235.774	251	screen:blank;
+402	 236.777	201	trial_number_absolut:58;trial_number_block:58;
+403	 236.808	211	screen:fixation_cross;
+404	 236.810	20	pairing_selection
+405	 238.025	231	reference_level:2;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+406	 239.024	225	target_level:2;target_figure:100;target_arrow_position:a;presentation_side:right;
+407	 240.727	241	pairing:match;response:same;response_evaluation:correct;rt:1662;
+408	 240.741	251	screen:blank;
+409	 241.743	201	trial_number_absolut:59;trial_number_block:59;
+410	 241.774	211	screen:fixation_cross;
+411	 241.777	123	pairing_selection
+412	 242.408	237	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+413	 243.408	221	target_level:2;target_figure:101;target_arrow_position:a;presentation_side:left;
+414	 244.517	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1081;
+415	 244.524	251	screen:blank;
+416	 245.527	201	trial_number_absolut:60;trial_number_block:60;
+417	 245.558	211	screen:fixation_cross;
+418	 245.560	28	pairing_selection
+419	 246.541	231	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+420	 247.541	225	target_level:2;target_figure:051;target_arrow_position:b;presentation_side:right;
+421	 248.490	241	pairing:match;response:same;response_evaluation:correct;rt:913;
+422	 248.507	251	screen:blank;
+423	 249.510	201	trial_number_absolut:61;trial_number_block:61;
+424	 249.541	211	screen:fixation_cross;
+425	 249.543	38	pairing_selection
+426	 250.491	231	reference_level:3;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+427	 251.491	225	target_level:3;target_figure:100;target_arrow_position:a;presentation_side:right;
+428	 252.262	241	pairing:match;response:same;response_evaluation:correct;rt:744;
+429	 252.274	251	screen:blank;
+430	 253.277	201	trial_number_absolut:62;trial_number_block:62;
+431	 253.308	211	screen:fixation_cross;
+432	 253.310	157	pairing_selection
+433	 253.858	237	reference_level:4;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+434	 254.858	221	target_level:4;target_figure:150;target_arrow_position:a;presentation_side:left;
+435	 255.842	241	pairing:mismatch;response:different;response_evaluation:correct;rt:950;
+436	 255.857	251	screen:blank;
+437	 256.860	201	trial_number_absolut:63;trial_number_block:63;
+438	 256.891	211	screen:fixation_cross;
+439	 256.893	61	pairing_selection
+440	 258.374	231	reference_level:4;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+441	 259.374	225	target_level:4;target_figure:050;target_arrow_position:b;presentation_side:right;
+442	 261.698	241	pairing:match;response:same;response_evaluation:correct;rt:2299;
+443	 261.707	251	screen:blank;
+444	 262.710	201	trial_number_absolut:64;trial_number_block:64;
+445	 262.741	211	screen:fixation_cross;
+446	 262.743	139	pairing_selection
+447	 263.524	237	reference_level:3;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+448	 264.524	221	target_level:3;target_figure:150;target_arrow_position:a;presentation_side:left;
+449	 265.628	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1066;
+450	 265.640	251	screen:blank;
+451	 266.643	201	trial_number_absolut:65;trial_number_block:65;
+452	 266.674	211	screen:fixation_cross;
+453	 266.677	26	pairing_selection
+454	 267.707	235	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+455	 268.707	221	target_level:2;target_figure:100;target_arrow_position:b;presentation_side:left;
+456	 269.638	241	pairing:match;response:same;response_evaluation:correct;rt:889;
+457	 269.657	251	screen:blank;
+458	 270.660	201	trial_number_absolut:66;trial_number_block:66;
+459	 270.691	211	screen:fixation_cross;
+460	 270.693	120	pairing_selection
+461	 272.141	237	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+462	 273.140	221	target_level:2;target_figure:100;target_arrow_position:a;presentation_side:left;
+463	 274.068	241	pairing:mismatch;response:different;response_evaluation:correct;rt:894;
+464	 274.073	251	screen:blank;
+465	 275.076	201	trial_number_absolut:67;trial_number_block:67;
+466	 275.107	211	screen:fixation_cross;
+467	 275.110	102	pairing_selection
+468	 276.574	233	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+469	 277.574	225	target_level:1;target_figure:100;target_arrow_position:x;presentation_side:right;
+470	 278.439	241	pairing:mismatch;response:different;response_evaluation:correct;rt:826;
+471	 278.457	251	screen:blank;
+472	 279.459	201	trial_number_absolut:68;trial_number_block:68;
+473	 279.490	211	screen:fixation_cross;
+474	 279.493	63	pairing_selection
+475	 280.924	231	reference_level:4;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+476	 281.924	225	target_level:4;target_figure:150;target_arrow_position:b;presentation_side:right;
+477	 283.150	241	pairing:match;response:same;response_evaluation:correct;rt:1190;
+478	 283.157	251	screen:blank;
+479	 284.159	201	trial_number_absolut:69;trial_number_block:69;
+480	 284.190	211	screen:fixation_cross;
+481	 284.193	19	pairing_selection
+482	 285.190	235	reference_level:2;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+483	 286.190	221	target_level:2;target_figure:050;target_arrow_position:a;presentation_side:left;
+484	 287.640	241	pairing:match;response:same;response_evaluation:correct;rt:1422;
+485	 287.657	251	screen:blank;
+486	 288.659	201	trial_number_absolut:70;trial_number_block:70;
+487	 288.690	211	screen:fixation_cross;
+488	 288.692	144	pairing_selection
+489	 289.824	233	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+490	 290.823	225	target_level:3;target_figure:100;target_arrow_position:b;presentation_side:right;
+491	 292.431	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1570;
+492	 292.440	251	screen:blank;
+493	 293.443	201	trial_number_absolut:71;trial_number_block:71;
+494	 293.473	211	screen:fixation_cross;
+495	 293.476	45	pairing_selection
+496	 294.623	231	reference_level:3;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+497	 295.623	225	target_level:3;target_figure:150;target_arrow_position:b;presentation_side:right;
+498	 296.686	241	pairing:match;response:same;response_evaluation:correct;rt:1032;
+499	 296.706	251	screen:blank;
+500	 297.709	201	trial_number_absolut:72;trial_number_block:72;
+501	 297.740	211	screen:fixation_cross;
+502	 297.742	13	pairing_selection
+503	 298.857	231	reference_level:1;reference_figure:000;reference_arrow_position:z;presentation_side:left;
+504	 299.857	225	target_level:1;target_figure:050;target_arrow_position:z;presentation_side:right;
+505	 300.316	241	pairing:match;response:same;response_evaluation:correct;rt:437;
+506	 300.323	251	screen:blank;
+507	 301.326	201	trial_number_absolut:73;trial_number_block:73;
+508	 301.357	211	screen:fixation_cross;
+509	 301.359	55	pairing_selection
+510	 302.073	231	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+511	 303.073	225	target_level:4;target_figure:050;target_arrow_position:a;presentation_side:right;
+512	 304.048	241	pairing:match;response:same;response_evaluation:correct;rt:938;
+513	 304.056	251	screen:blank;
+514	 305.059	201	trial_number_absolut:74;trial_number_block:74;
+515	 305.090	211	screen:fixation_cross;
+516	 305.092	116	pairing_selection
+517	 306.423	233	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+518	 307.423	225	target_level:1;target_figure:051;target_arrow_position:z;presentation_side:right;
+519	 308.178	241	pairing:mismatch;response:different;response_evaluation:correct;rt:720;
+520	 308.190	251	screen:blank;
+521	 309.192	201	trial_number_absolut:75;trial_number_block:75;
+522	 309.223	211	screen:fixation_cross;
+523	 309.226	113	pairing_selection
+524	 310.523	237	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+525	 311.523	221	target_level:1;target_figure:050;target_arrow_position:z;presentation_side:left;
+526	 312.587	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1025;
+527	 312.606	251	screen:blank;
+528	 313.609	201	trial_number_absolut:76;trial_number_block:76;
+529	 313.640	211	screen:fixation_cross;
+530	 313.642	10	pairing_selection
+531	 314.756	231	reference_level:1;reference_figure:000;reference_arrow_position:y;presentation_side:left;
+532	 315.756	225	target_level:1;target_figure:051;target_arrow_position:y;presentation_side:right;
+533	 316.278	241	pairing:match;response:same;response_evaluation:correct;rt:496;
+534	 316.289	251	screen:blank;
+535	 317.292	201	trial_number_absolut:77;trial_number_block:77;
+536	 317.323	211	screen:fixation_cross;
+537	 317.326	150	pairing_selection
+538	 318.006	233	reference_level:3;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+539	 319.006	225	target_level:3;target_figure:100;target_arrow_position:c;presentation_side:right;
+540	 320.286	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1251;
+541	 320.306	251	screen:blank;
+542	 321.309	201	trial_number_absolut:78;trial_number_block:78;
+543	 321.339	211	screen:fixation_cross;
+544	 321.342	162	pairing_selection
+545	 322.573	233	reference_level:4;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+546	 323.573	225	target_level:4;target_figure:100;target_arrow_position:b;presentation_side:right;
+547	 325.598	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1996;
+548	 325.606	251	screen:blank;
+549	 326.609	201	trial_number_absolut:79;trial_number_block:79;
+550	 326.639	211	screen:fixation_cross;
+551	 326.642	106	pairing_selection
+552	 327.339	237	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+553	 328.339	221	target_level:1;target_figure:151;target_arrow_position:x;presentation_side:left;
+554	 329.868	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1490;
+555	 329.889	251	screen:blank;
+556	 330.892	201	trial_number_absolut:80;trial_number_block:80;
+557	 330.923	211	screen:fixation_cross;
+558	 330.925	152	pairing_selection
+559	 331.856	233	reference_level:3;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+560	 332.856	225	target_level:3;target_figure:051;target_arrow_position:c;presentation_side:right;
+561	 334.638	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1749;
+562	 334.656	251	screen:blank;
+563	 335.659	201	trial_number_absolut:81;trial_number_block:81;
+564	 335.689	211	screen:fixation_cross;
+565	 335.691	27	pairing_selection
+566	 336.573	231	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+567	 337.572	225	target_level:2;target_figure:150;target_arrow_position:b;presentation_side:right;
+568	 338.955	241	pairing:match;response:same;response_evaluation:correct;rt:1339;
+569	 338.972	251	screen:blank;
+570	 339.975	201	trial_number_absolut:82;trial_number_block:82;
+571	 340.006	211	screen:fixation_cross;
+572	 340.008	17	pairing_selection
+573	 341.472	231	reference_level:1;reference_figure:000;reference_arrow_position:z;presentation_side:left;
+574	 342.472	225	target_level:1;target_figure:101;target_arrow_position:z;presentation_side:right;
+575	 342.985	241	pairing:match;response:same;response_evaluation:correct;rt:485;
+576	 343.006	251	screen:blank;
+577	 344.008	201	trial_number_absolut:83;trial_number_block:83;
+578	 344.039	211	screen:fixation_cross;
+579	 344.042	14	pairing_selection
+580	 344.839	235	reference_level:1;reference_figure:000;reference_arrow_position:z;presentation_side:right;
+581	 345.839	221	target_level:1;target_figure:100;target_arrow_position:z;presentation_side:left;
+582	 346.262	241	pairing:match;response:same;response_evaluation:correct;rt:394;
+583	 346.272	251	screen:blank;
+584	 347.275	201	trial_number_absolut:84;trial_number_block:84;
+585	 347.306	211	screen:fixation_cross;
+586	 347.308	4	pairing_selection
+587	 347.906	231	reference_level:1;reference_figure:000;reference_arrow_position:x;presentation_side:left;
+588	 348.906	225	target_level:1;target_figure:051;target_arrow_position:x;presentation_side:right;
+589	 349.292	241	pairing:match;response:same;response_evaluation:correct;rt:365;
+590	 349.305	251	screen:blank;
+591	 350.308	201	trial_number_absolut:85;trial_number_block:85;
+592	 350.339	211	screen:fixation_cross;
+593	 350.342	172	pairing_selection
+594	 351.206	233	reference_level:4;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+595	 352.206	225	target_level:4;target_figure:151;target_arrow_position:c;presentation_side:right;
+596	 353.768	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1544;
+597	 353.789	251	screen:blank;
+598	 354.791	201	trial_number_absolut:86;trial_number_block:86;
+599	 354.822	211	screen:fixation_cross;
+600	 354.825	70	pairing_selection
+601	 355.505	235	reference_level:4;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+602	 356.505	221	target_level:4;target_figure:051;target_arrow_position:c;presentation_side:left;
+603	 358.339	241	pairing:match;response:same;response_evaluation:correct;rt:1797;
+604	 358.355	251	screen:blank;
+605	 359.358	201	trial_number_absolut:87;trial_number_block:87;
+606	 359.389	211	screen:fixation_cross;
+607	 359.391	11	pairing_selection
+608	 360.472	231	reference_level:1;reference_figure:000;reference_arrow_position:y;presentation_side:left;
+609	 361.472	225	target_level:1;target_figure:101;target_arrow_position:y;presentation_side:right;
+610	 361.895	241	pairing:match;response:same;response_evaluation:correct;rt:399;
+611	 361.905	251	screen:blank;
+612	 362.908	201	trial_number_absolut:88;trial_number_block:88;
+613	 362.939	211	screen:fixation_cross;
+614	 362.941	117	pairing_selection
+615	 364.089	237	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+616	 365.089	221	target_level:1;target_figure:101;target_arrow_position:z;presentation_side:left;
+617	 365.905	241	pairing:mismatch;response:different;response_evaluation:correct;rt:792;
+618	 365.922	251	screen:blank;
+619	 366.924	201	trial_number_absolut:89;trial_number_block:89;
+620	 366.955	211	screen:fixation_cross;
+621	 366.958	137	pairing_selection
+622	 368.372	233	reference_level:3;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+623	 369.372	225	target_level:3;target_figure:050;target_arrow_position:a;presentation_side:right;
+624	 370.695	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1298;
+625	 370.705	251	screen:blank;
+626	 371.708	201	trial_number_absolut:90;trial_number_block:90;
+627	 371.738	211	screen:fixation_cross;
+628	 371.741	68	pairing_selection
+629	 372.322	231	reference_level:4;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+630	 373.322	225	target_level:4;target_figure:100;target_arrow_position:c;presentation_side:right;
+631	 374.767	241	pairing:match;response:same;response_evaluation:correct;rt:1414;
+632	 374.771	251	screen:blank;
+633	 375.774	201	trial_number_absolut:91;trial_number_block:91;
+634	 375.805	211	screen:fixation_cross;
+635	 375.808	71	pairing_selection
+636	 377.155	235	reference_level:4;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+637	 378.155	221	target_level:4;target_figure:101;target_arrow_position:c;presentation_side:left;
+638	 379.300	241	pairing:match;response:same;response_evaluation:correct;rt:1107;
+639	 379.305	251	screen:blank;
+640	 380.307	201	trial_number_absolut:92;trial_number_block:92;
+641	 380.338	211	screen:fixation_cross;
+642	 380.341	51	pairing_selection
+643	 381.338	231	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+644	 382.338	225	target_level:3;target_figure:150;target_arrow_position:c;presentation_side:right;
+645	 383.210	241	pairing:match;response:same;response_evaluation:correct;rt:839;
+646	 383.221	251	screen:blank;
+647	 384.224	201	trial_number_absolut:93;trial_number_block:93;
+648	 384.255	211	screen:fixation_cross;
+649	 384.257	161	pairing_selection
+650	 385.738	233	reference_level:4;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+651	 386.738	225	target_level:4;target_figure:050;target_arrow_position:b;presentation_side:right;
+652	 388.640	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1861;
+653	 388.655	251	screen:blank;
+654	 389.658	201	trial_number_absolut:94;trial_number_block:94;
+655	 389.688	211	screen:fixation_cross;
+656	 389.691	41	pairing_selection
+657	 390.355	235	reference_level:3;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+658	 391.355	221	target_level:3;target_figure:101;target_arrow_position:a;presentation_side:left;
+659	 392.250	241	pairing:match;response:same;response_evaluation:correct;rt:868;
+660	 392.271	251	screen:blank;
+661	 393.274	201	trial_number_absolut:95;trial_number_block:95;
+662	 393.305	211	screen:fixation_cross;
+663	 393.307	125	pairing_selection
+664	 394.805	233	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+665	 395.805	225	target_level:2;target_figure:050;target_arrow_position:b;presentation_side:right;
+666	 397.320	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1487;
+667	 397.338	251	screen:blank;
+668	 398.341	201	trial_number_absolut:96;trial_number_block:96;
+669	 398.371	211	screen:fixation_cross;
+670	 398.374	50	pairing_selection
+671	 399.555	235	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+672	 400.555	221	target_level:3;target_figure:100;target_arrow_position:c;presentation_side:left;
+673	 402.577	241	pairing:match;response:same;response_evaluation:correct;rt:1992;
+674	 402.588	251	screen:blank;
+675	 403.590	201	trial_number_absolut:97;trial_number_block:97;
+676	 403.621	211	screen:fixation_cross;
+677	 403.624	72	pairing_selection
+678	 404.588	231	reference_level:4;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+679	 405.588	225	target_level:4;target_figure:151;target_arrow_position:c;presentation_side:right;
+680	 407.031	241	pairing:match;response:same;response_evaluation:correct;rt:1414;
+681	 407.037	251	screen:blank;
+682	 408.040	201	trial_number_absolut:98;trial_number_block:98;
+683	 408.071	211	screen:fixation_cross;
+684	 408.073	151	pairing_selection
+685	 408.871	237	reference_level:3;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+686	 409.871	221	target_level:3;target_figure:150;target_arrow_position:c;presentation_side:left;
+687	 411.122	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1227;
+688	 411.137	251	screen:blank;
+689	 412.140	201	trial_number_absolut:99;trial_number_block:99;
+690	 412.171	211	screen:fixation_cross;
+691	 412.174	126	pairing_selection
+692	 413.371	233	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+693	 414.371	225	target_level:2;target_figure:100;target_arrow_position:b;presentation_side:right;
+694	 415.393	241	pairing:mismatch;response:different;response_evaluation:correct;rt:998;
+695	 415.404	251	screen:blank;
+696	 416.407	201	trial_number_absolut:100;trial_number_block:100;
+697	 416.438	211	screen:fixation_cross;
+698	 416.440	62	pairing_selection
+699	 417.704	235	reference_level:4;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+700	 418.704	221	target_level:4;target_figure:100;target_arrow_position:b;presentation_side:left;
+701	 420.708	241	pairing:match;response:same;response_evaluation:correct;rt:1968;
+702	 420.721	251	screen:blank;
+703	 421.724	201	trial_number_absolut:101;trial_number_block:101;
+704	 421.754	211	screen:fixation_cross;
+705	 421.757	64	pairing_selection
+706	 422.604	235	reference_level:4;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+707	 423.604	221	target_level:4;target_figure:051;target_arrow_position:b;presentation_side:left;
+708	 424.537	241	pairing:match;response:same;response_evaluation:correct;rt:898;
+709	 424.554	251	screen:blank;
+710	 425.557	201	trial_number_absolut:102;trial_number_block:102;
+711	 425.587	211	screen:fixation_cross;
+712	 425.590	128	pairing_selection
+713	 426.971	237	reference_level:2;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+714	 427.971	221	target_level:2;target_figure:051;target_arrow_position:b;presentation_side:left;
+715	 429.214	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1207;
+716	 429.220	251	screen:blank;
+717	 430.223	201	trial_number_absolut:103;trial_number_block:103;
+718	 430.254	211	screen:fixation_cross;
+719	 430.256	31	pairing_selection
+720	 430.987	231	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+721	 431.987	225	target_level:2;target_figure:050;target_arrow_position:c;presentation_side:right;
+722	 433.830	241	pairing:match;response:same;response_evaluation:correct;rt:1803;
+723	 433.837	251	screen:blank;
+724	 434.840	201	trial_number_absolut:104;trial_number_block:104;
+725	 434.870	211	screen:fixation_cross;
+726	 434.873	141	pairing_selection
+727	 435.404	237	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+728	 436.404	221	target_level:3;target_figure:101;target_arrow_position:a;presentation_side:left;
+729	 437.341	241	pairing:mismatch;response:different;response_evaluation:correct;rt:915;
+730	 437.354	251	screen:blank;
+731	 438.356	201	trial_number_absolut:105;trial_number_block:105;
+732	 438.387	211	screen:fixation_cross;
+733	 438.389	22	pairing_selection
+734	 439.154	235	reference_level:2;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+735	 440.154	221	target_level:2;target_figure:051;target_arrow_position:a;presentation_side:left;
+736	 441.097	241	pairing:match;response:same;response_evaluation:correct;rt:918;
+737	 441.103	251	screen:blank;
+738	 442.106	201	trial_number_absolut:106;trial_number_block:106;
+739	 442.137	211	screen:fixation_cross;
+740	 442.140	3	pairing_selection
+741	 443.020	235	reference_level:1;reference_figure:000;reference_arrow_position:x;presentation_side:right;
+742	 444.020	221	target_level:1;target_figure:150;target_arrow_position:x;presentation_side:left;
+743	 444.627	241	pairing:match;response:same;response_evaluation:correct;rt:571;
+744	 444.637	251	screen:blank;
+745	 445.640	201	trial_number_absolut:107;trial_number_block:107;
+746	 445.670	211	screen:fixation_cross;
+747	 445.673	158	pairing_selection
+748	 446.887	237	reference_level:4;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+749	 447.887	221	target_level:4;target_figure:051;target_arrow_position:a;presentation_side:left;
+750	 448.838	241	pairing:mismatch;response:different;response_evaluation:correct;rt:912;
+751	 448.853	251	screen:blank;
+752	 449.856	201	trial_number_absolut:108;trial_number_block:108;
+753	 449.887	211	screen:fixation_cross;
+754	 449.890	32	pairing_selection
+755	 450.804	235	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+756	 451.804	221	target_level:2;target_figure:100;target_arrow_position:c;presentation_side:left;
+757	 452.968	241	pairing:match;response:same;response_evaluation:correct;rt:1118;
+758	 452.987	251	screen:blank;
+759	 453.989	201	trial_number_absolut:109;trial_number_block:109;
+760	 454.020	211	screen:fixation_cross;
+761	 454.023	5	pairing_selection
+762	 454.653	231	reference_level:1;reference_figure:000;reference_arrow_position:x;presentation_side:left;
+763	 455.653	225	target_level:1;target_figure:101;target_arrow_position:x;presentation_side:right;
+764	 456.439	241	pairing:match;response:same;response_evaluation:correct;rt:757;
+765	 456.453	251	screen:blank;
+766	 457.456	201	trial_number_absolut:110;trial_number_block:110;
+767	 457.487	211	screen:fixation_cross;
+768	 457.489	1	pairing_selection
+769	 458.187	235	reference_level:1;reference_figure:000;reference_arrow_position:x;presentation_side:right;
+770	 459.187	221	target_level:1;target_figure:050;target_arrow_position:x;presentation_side:left;
+771	 459.809	241	pairing:match;response:same;response_evaluation:correct;rt:593;
+772	 459.820	251	screen:blank;
+773	 460.823	201	trial_number_absolut:111;trial_number_block:111;
+774	 460.853	211	screen:fixation_cross;
+775	 460.856	168	pairing_selection
+776	 461.787	237	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+777	 462.787	221	target_level:4;target_figure:100;target_arrow_position:c;presentation_side:left;
+778	 463.729	241	pairing:mismatch;response:different;response_evaluation:correct;rt:913;
+779	 463.736	251	screen:blank;
+780	 464.739	201	trial_number_absolut:112;trial_number_block:112;
+781	 464.770	211	screen:fixation_cross;
+782	 464.772	47	pairing_selection
+783	 465.953	235	reference_level:3;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+784	 466.953	221	target_level:3;target_figure:101;target_arrow_position:b;presentation_side:left;
+785	 468.582	241	pairing:match;response:same;response_evaluation:correct;rt:1583;
+786	 468.586	251	screen:blank;
+787	 469.589	201	trial_number_absolut:113;trial_number_block:113;
+788	 469.620	211	screen:fixation_cross;
+789	 469.622	59	pairing_selection
+790	 470.603	231	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+791	 471.603	225	target_level:4;target_figure:101;target_arrow_position:a;presentation_side:right;
+792	 472.646	241	pairing:match;response:same;response_evaluation:correct;rt:1000;
+793	 472.653	251	screen:blank;
+794	 473.656	201	trial_number_absolut:114;trial_number_block:114;
+795	 473.686	211	screen:fixation_cross;
+796	 473.689	12	pairing_selection
+797	 475.003	231	reference_level:1;reference_figure:000;reference_arrow_position:y;presentation_side:left;
+798	 476.003	225	target_level:1;target_figure:151;target_arrow_position:y;presentation_side:right;
+799	 476.596	241	pairing:match;response:same;response_evaluation:correct;rt:575;
+800	 476.603	251	screen:blank;
+801	 477.606	201	trial_number_absolut:115;trial_number_block:115;
+802	 477.636	211	screen:fixation_cross;
+803	 477.639	23	pairing_selection
+804	 478.236	231	reference_level:2;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+805	 479.236	225	target_level:2;target_figure:101;target_arrow_position:a;presentation_side:right;
+806	 480.126	241	pairing:match;response:same;response_evaluation:correct;rt:853;
+807	 480.136	251	screen:blank;
+808	 481.139	201	trial_number_absolut:116;trial_number_block:116;
+809	 481.170	211	screen:fixation_cross;
+810	 481.172	135	pairing_selection
+811	 482.620	237	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+812	 483.620	221	target_level:2;target_figure:101;target_arrow_position:c;presentation_side:left;
+813	 484.581	241	pairing:mismatch;response:different;response_evaluation:correct;rt:933;
+814	 484.586	251	screen:blank;
+815	 485.588	201	trial_number_absolut:117;trial_number_block:117;
+816	 485.620	211	screen:fixation_cross;
+817	 485.622	48	pairing_selection
+818	 487.019	235	reference_level:3;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+819	 488.019	221	target_level:3;target_figure:151;target_arrow_position:b;presentation_side:left;
+820	 489.912	241	pairing:match;response:same;response_evaluation:correct;rt:1861;
+821	 489.919	251	screen:blank;
+822	 490.922	201	trial_number_absolut:118;trial_number_block:118;
+823	 490.953	211	screen:fixation_cross;
+824	 490.955	56	pairing_selection
+825	 491.619	231	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+826	 492.619	225	target_level:4;target_figure:100;target_arrow_position:a;presentation_side:right;
+827	 493.503	241	pairing:match;response:same;response_evaluation:correct;rt:846;
+828	 493.519	251	screen:blank;
+829	 494.522	201	trial_number_absolut:119;trial_number_block:119;
+830	 494.553	211	screen:fixation_cross;
+831	 494.555	167	pairing_selection
+832	 495.119	237	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+833	 496.119	221	target_level:4;target_figure:050;target_arrow_position:c;presentation_side:left;
+834	 498.062	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1920;
+835	 498.069	251	screen:blank;
+836	 499.072	201	trial_number_absolut:120;trial_number_block:120;
+837	 499.102	211	screen:fixation_cross;
+838	 499.105	35	pairing_selection
+839	 500.153	231	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+840	 501.152	225	target_level:2;target_figure:101;target_arrow_position:c;presentation_side:right;
+841	 502.596	240	pairing:match;response:different;response_evaluation:false;rt:1413;
+842	 502.602	251	screen:blank;
+843	 503.605	112	block_end:1;
+844	 568.202	111	block_start:2;
+845	 569.207	201	trial_number_absolut:121;trial_number_block:1;
+846	 569.234	211	screen:fixation_cross;
+847	 569.237	60	pairing_selection
+848	 570.501	235	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+849	 571.501	221	target_level:4;target_figure:151;target_arrow_position:a;presentation_side:left;
+850	 572.352	102	measurement:end;

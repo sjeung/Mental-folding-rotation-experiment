@@ -1,0 +1,6 @@
+  1	   0.005	101	startMeasurement
+  2	   1.009	111	blockstart
+  3	   2.052	255	blankscreen
+  4	   2.669	5	refstim-1_000_x-left
+  5	   3.669	5	tarstim-1_100_x-right
+  6	   4.993	102	endMeasurement

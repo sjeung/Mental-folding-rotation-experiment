@@ -1,0 +1,286 @@
+  1	   0.031	101	measurement:start;
+  2	   1.107	111	block_start:1;
+  3	   2.161	201	trial_number_absolut:1;trial_number_block:1;
+  4	   2.211	211	screen:fixation_cross;
+  5	   2.217	164	pairing_selection
+  6	   3.146	237	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+  7	   4.143	221	target_level:4;target_figure:051;target_arrow_position:b;presentation_side:left;
+  8	   5.385	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1214;
+  9	   6.426	251	screen:blank;
+ 10	   7.431	201	trial_number_absolut:2;trial_number_block:2;
+ 11	   7.459	211	screen:fixation_cross;
+ 12	   7.462	133	pairing_selection
+ 13	   8.493	233	reference_level:2;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+ 14	   9.493	225	target_level:2;target_figure:150;target_arrow_position:c;presentation_side:right;
+ 15	  10.456	240	pairing:mismatch;response:same;response_evaluation:false;rt:927;
+ 16	  11.492	251	screen:blank;
+ 17	  12.497	201	trial_number_absolut:3;trial_number_block:3;
+ 18	  12.542	211	screen:fixation_cross;
+ 19	  12.545	51	pairing_selection
+ 20	  13.059	231	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+ 21	  14.059	225	target_level:3;target_figure:150;target_arrow_position:c;presentation_side:right;
+ 22	  15.187	241	pairing:match;response:same;response_evaluation:correct;rt:1088;
+ 23	  16.226	251	screen:blank;
+ 24	  17.230	201	trial_number_absolut:4;trial_number_block:4;
+ 25	  17.259	211	screen:fixation_cross;
+ 26	  17.262	36	pairing_selection
+ 27	  18.342	231	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+ 28	  19.342	225	target_level:2;target_figure:151;target_arrow_position:c;presentation_side:right;
+ 29	  20.000	241	pairing:match;response:same;response_evaluation:correct;rt:610;
+ 30	  21.026	251	screen:blank;
+ 31	  22.031	201	trial_number_absolut:5;trial_number_block:5;
+ 32	  22.059	211	screen:fixation_cross;
+ 33	  22.062	49	pairing_selection
+ 34	  23.360	235	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+ 35	  24.360	221	target_level:3;target_figure:050;target_arrow_position:c;presentation_side:left;
+ 36	  24.912	241	pairing:match;response:same;response_evaluation:correct;rt:513;
+ 37	  25.942	251	screen:blank;
+ 38	  26.948	201	trial_number_absolut:6;trial_number_block:6;
+ 39	  26.975	211	screen:fixation_cross;
+ 40	  26.978	32	pairing_selection
+ 41	  27.959	231	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+ 42	  28.959	225	target_level:2;target_figure:100;target_arrow_position:c;presentation_side:right;
+ 43	  29.762	241	pairing:match;response:same;response_evaluation:correct;rt:780;
+ 44	  30.792	251	screen:blank;
+ 45	  31.795	201	trial_number_absolut:7;trial_number_block:7;
+ 46	  31.825	211	screen:fixation_cross;
+ 47	  31.828	20	pairing_selection
+ 48	  32.542	231	reference_level:2;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+ 49	  33.542	225	target_level:2;target_figure:100;target_arrow_position:a;presentation_side:right;
+ 50	  34.156	241	pairing:match;response:same;response_evaluation:correct;rt:573;
+ 51	  35.192	251	screen:blank;
+ 52	  36.195	201	trial_number_absolut:8;trial_number_block:8;
+ 53	  36.225	211	screen:fixation_cross;
+ 54	  36.228	107	pairing_selection
+ 55	  37.475	237	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+ 56	  38.475	221	target_level:1;target_figure:050;target_arrow_position:y;presentation_side:left;
+ 57	  39.549	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1043;
+ 58	  40.575	251	screen:blank;
+ 59	  41.578	201	trial_number_absolut:9;trial_number_block:9;
+ 60	  41.609	211	screen:fixation_cross;
+ 61	  41.611	141	pairing_selection
+ 62	  42.375	233	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+ 63	  43.375	225	target_level:3;target_figure:101;target_arrow_position:a;presentation_side:right;
+ 64	  44.778	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1367;
+ 65	  45.808	251	screen:blank;
+ 66	  46.812	201	trial_number_absolut:10;trial_number_block:10;
+ 67	  46.842	211	screen:fixation_cross;
+ 68	  46.844	1	pairing_selection
+ 69	  47.975	235	reference_level:1;reference_figure:000;reference_arrow_position:x;presentation_side:right;
+ 70	  48.975	221	target_level:1;target_figure:050;target_arrow_position:x;presentation_side:left;
+ 71	  49.628	241	pairing:match;response:same;response_evaluation:correct;rt:633;
+ 72	  50.658	251	screen:blank;
+ 73	  51.662	201	trial_number_absolut:11;trial_number_block:11;
+ 74	  51.692	211	screen:fixation_cross;
+ 75	  51.694	12	pairing_selection
+ 76	  53.142	231	reference_level:1;reference_figure:000;reference_arrow_position:y;presentation_side:left;
+ 77	  54.142	225	target_level:1;target_figure:151;target_arrow_position:y;presentation_side:right;
+ 78	  54.625	241	pairing:match;response:same;response_evaluation:correct;rt:452;
+ 79	  55.658	251	screen:blank;
+ 80	  56.661	201	trial_number_absolut:12;trial_number_block:12;
+ 81	  56.692	211	screen:fixation_cross;
+ 82	  56.694	59	pairing_selection
+ 83	  57.308	235	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+ 84	  58.308	221	target_level:4;target_figure:101;target_arrow_position:a;presentation_side:left;
+ 85	  58.979	241	pairing:match;response:same;response_evaluation:correct;rt:634;
+ 86	  60.008	251	screen:blank;
+ 87	  61.011	201	trial_number_absolut:13;trial_number_block:13;
+ 88	  61.042	211	screen:fixation_cross;
+ 89	  61.044	172	pairing_selection
+ 90	  61.875	233	reference_level:4;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+ 91	  62.875	225	target_level:4;target_figure:151;target_arrow_position:c;presentation_side:right;
+ 92	  63.869	241	pairing:mismatch;response:different;response_evaluation:correct;rt:970;
+ 93	  64.908	251	screen:blank;
+ 94	  65.911	201	trial_number_absolut:14;trial_number_block:14;
+ 95	  65.942	211	screen:fixation_cross;
+ 96	  65.944	30	pairing_selection
+ 97	  67.458	235	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+ 98	  68.458	221	target_level:2;target_figure:151;target_arrow_position:b;presentation_side:left;
+ 99	  69.422	241	pairing:match;response:same;response_evaluation:correct;rt:943;
+100	  70.458	251	screen:blank;
+101	  71.461	201	trial_number_absolut:15;trial_number_block:15;
+102	  71.491	211	screen:fixation_cross;
+103	  71.494	45	pairing_selection
+104	  72.058	235	reference_level:3;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+105	  73.058	221	target_level:3;target_figure:150;target_arrow_position:b;presentation_side:left;
+106	  73.752	241	pairing:match;response:same;response_evaluation:correct;rt:648;
+107	  74.775	251	screen:blank;
+108	  75.778	201	trial_number_absolut:16;trial_number_block:16;
+109	  75.808	211	screen:fixation_cross;
+110	  75.811	152	pairing_selection
+111	  77.208	237	reference_level:3;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+112	  78.208	221	target_level:3;target_figure:051;target_arrow_position:c;presentation_side:left;
+113	  78.923	241	pairing:mismatch;response:different;response_evaluation:correct;rt:689;
+114	  79.958	251	screen:blank;
+115	  80.961	201	trial_number_absolut:17;trial_number_block:17;
+116	  80.991	211	screen:fixation_cross;
+117	  80.994	38	pairing_selection
+118	  82.341	235	reference_level:3;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+119	  83.341	221	target_level:3;target_figure:100;target_arrow_position:a;presentation_side:left;
+120	  83.933	241	pairing:match;response:same;response_evaluation:correct;rt:562;
+121	  84.958	251	screen:blank;
+122	  85.961	201	trial_number_absolut:18;trial_number_block:18;
+123	  85.991	211	screen:fixation_cross;
+124	  85.994	117	pairing_selection
+125	  87.191	237	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+126	  88.191	221	target_level:1;target_figure:101;target_arrow_position:z;presentation_side:left;
+127	  88.964	241	pairing:mismatch;response:different;response_evaluation:correct;rt:752;
+128	  89.991	251	screen:blank;
+129	  90.994	201	trial_number_absolut:19;trial_number_block:19;
+130	  91.024	211	screen:fixation_cross;
+131	  91.027	119	pairing_selection
+132	  91.908	233	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+133	  92.908	225	target_level:2;target_figure:050;target_arrow_position:a;presentation_side:right;
+134	  93.617	241	pairing:mismatch;response:different;response_evaluation:correct;rt:675;
+135	  94.641	251	screen:blank;
+136	  95.644	201	trial_number_absolut:20;trial_number_block:20;
+137	  95.674	211	screen:fixation_cross;
+138	  95.677	58	pairing_selection
+139	  96.341	231	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+140	  97.341	225	target_level:4;target_figure:051;target_arrow_position:a;presentation_side:right;
+141	  98.130	241	pairing:match;response:same;response_evaluation:correct;rt:754;
+142	  99.158	251	screen:blank;
+143	 100.161	112	block_end:1;
+144	 114.058	111	block_start:2;
+145	 115.063	201	trial_number_absolut:21;trial_number_block:1;
+146	 115.091	211	screen:fixation_cross;
+147	 115.093	49	pairing_selection
+148	 116.174	231	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+149	 117.174	225	target_level:3;target_figure:050;target_arrow_position:c;presentation_side:right;
+150	 117.935	241	pairing:match;response:same;response_evaluation:correct;rt:720;
+151	 118.974	251	screen:blank;
+152	 119.977	201	trial_number_absolut:22;trial_number_block:2;
+153	 120.007	211	screen:fixation_cross;
+154	 120.010	107	pairing_selection
+155	 120.574	233	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+156	 121.574	225	target_level:1;target_figure:050;target_arrow_position:y;presentation_side:right;
+157	 122.426	241	pairing:mismatch;response:different;response_evaluation:correct;rt:814;
+158	 123.457	251	screen:blank;
+159	 124.460	201	trial_number_absolut:23;trial_number_block:3;
+160	 124.491	211	screen:fixation_cross;
+161	 124.493	20	pairing_selection
+162	 125.107	235	reference_level:2;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+163	 126.107	221	target_level:2;target_figure:100;target_arrow_position:a;presentation_side:left;
+164	 127.838	241	pairing:match;response:same;response_evaluation:correct;rt:1689;
+165	 128.874	251	screen:blank;
+166	 129.877	201	trial_number_absolut:24;trial_number_block:4;
+167	 129.907	211	screen:fixation_cross;
+168	 129.910	152	pairing_selection
+169	 130.574	237	reference_level:3;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+170	 131.574	221	target_level:3;target_figure:051;target_arrow_position:c;presentation_side:left;
+171	 132.507	241	pairing:mismatch;response:different;response_evaluation:correct;rt:902;
+172	 133.540	251	screen:blank;
+173	 134.544	201	trial_number_absolut:25;trial_number_block:5;
+174	 134.574	211	screen:fixation_cross;
+175	 134.576	164	pairing_selection
+176	 135.607	233	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+177	 136.607	225	target_level:4;target_figure:051;target_arrow_position:b;presentation_side:right;
+178	 137.465	241	pairing:mismatch;response:different;response_evaluation:correct;rt:818;
+179	 138.490	251	screen:blank;
+180	 139.493	201	trial_number_absolut:26;trial_number_block:6;
+181	 139.524	211	screen:fixation_cross;
+182	 139.526	58	pairing_selection
+183	 140.407	235	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+184	 141.407	221	target_level:4;target_figure:051;target_arrow_position:a;presentation_side:left;
+185	 142.115	241	pairing:match;response:same;response_evaluation:correct;rt:682;
+186	 143.140	251	screen:blank;
+187	 144.143	201	trial_number_absolut:27;trial_number_block:7;
+188	 144.174	211	screen:fixation_cross;
+189	 144.177	30	pairing_selection
+190	 145.574	235	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+191	 146.574	221	target_level:2;target_figure:151;target_arrow_position:b;presentation_side:left;
+192	 147.605	241	pairing:match;response:same;response_evaluation:correct;rt:992;
+193	 148.640	251	screen:blank;
+194	 149.643	201	trial_number_absolut:28;trial_number_block:8;
+195	 149.674	211	screen:fixation_cross;
+196	 149.676	117	pairing_selection
+197	 150.924	237	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+198	 151.924	221	target_level:1;target_figure:101;target_arrow_position:z;presentation_side:left;
+199	 152.699	241	pairing:mismatch;response:different;response_evaluation:correct;rt:741;
+200	 153.723	251	screen:blank;
+201	 154.727	201	trial_number_absolut:29;trial_number_block:9;
+202	 154.757	211	screen:fixation_cross;
+203	 154.759	12	pairing_selection
+204	 155.890	231	reference_level:1;reference_figure:000;reference_arrow_position:y;presentation_side:left;
+205	 156.890	225	target_level:1;target_figure:151;target_arrow_position:y;presentation_side:right;
+206	 157.589	241	pairing:match;response:same;response_evaluation:correct;rt:655;
+207	 158.623	251	screen:blank;
+208	 159.626	201	trial_number_absolut:30;trial_number_block:10;
+209	 159.657	211	screen:fixation_cross;
+210	 159.659	119	pairing_selection
+211	 160.857	237	reference_level:2;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+212	 161.857	221	target_level:2;target_figure:050;target_arrow_position:a;presentation_side:left;
+213	 163.560	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1661;
+214	 164.590	251	screen:blank;
+215	 165.593	201	trial_number_absolut:31;trial_number_block:11;
+216	 165.623	211	screen:fixation_cross;
+217	 165.626	133	pairing_selection
+218	 167.140	233	reference_level:2;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+219	 168.140	225	target_level:2;target_figure:150;target_arrow_position:c;presentation_side:right;
+220	 170.913	241	pairing:mismatch;response:different;response_evaluation:correct;rt:2729;
+221	 171.940	251	screen:blank;
+222	 172.943	201	trial_number_absolut:32;trial_number_block:12;
+223	 172.956	211	screen:fixation_cross;
+224	 172.959	38	pairing_selection
+225	 173.723	235	reference_level:3;reference_figure:000;reference_arrow_position:a;presentation_side:right;
+226	 174.723	221	target_level:3;target_figure:100;target_arrow_position:a;presentation_side:left;
+227	 176.126	241	pairing:match;response:same;response_evaluation:correct;rt:1364;
+228	 177.156	251	screen:blank;
+229	 178.160	201	trial_number_absolut:33;trial_number_block:13;
+230	 178.173	211	screen:fixation_cross;
+231	 178.175	172	pairing_selection
+232	 179.157	233	reference_level:4;reference_figure:000;reference_arrow_position:b;presentation_side:left;
+233	 180.156	225	target_level:4;target_figure:151;target_arrow_position:c;presentation_side:right;
+234	 181.539	241	pairing:mismatch;response:different;response_evaluation:correct;rt:1358;
+235	 182.573	251	screen:blank;
+236	 183.576	201	trial_number_absolut:34;trial_number_block:14;
+237	 183.606	211	screen:fixation_cross;
+238	 183.609	32	pairing_selection
+239	 184.906	235	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+240	 185.906	221	target_level:2;target_figure:100;target_arrow_position:c;presentation_side:left;
+241	 186.851	241	pairing:match;response:same;response_evaluation:correct;rt:908;
+242	 187.890	251	screen:blank;
+243	 188.893	201	trial_number_absolut:35;trial_number_block:15;
+244	 188.923	211	screen:fixation_cross;
+245	 188.925	59	pairing_selection
+246	 189.856	231	reference_level:4;reference_figure:000;reference_arrow_position:a;presentation_side:left;
+247	 190.856	225	target_level:4;target_figure:101;target_arrow_position:a;presentation_side:right;
+248	 191.801	241	pairing:match;response:same;response_evaluation:correct;rt:911;
+249	 192.840	251	screen:blank;
+250	 193.843	201	trial_number_absolut:36;trial_number_block:16;
+251	 193.873	211	screen:fixation_cross;
+252	 193.876	141	pairing_selection
+253	 194.390	237	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+254	 195.390	221	target_level:3;target_figure:101;target_arrow_position:a;presentation_side:left;
+255	 196.335	241	pairing:mismatch;response:different;response_evaluation:correct;rt:908;
+256	 197.373	251	screen:blank;
+257	 198.376	201	trial_number_absolut:37;trial_number_block:17;
+258	 198.406	211	screen:fixation_cross;
+259	 198.409	36	pairing_selection
+260	 199.123	231	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+261	 200.123	225	target_level:2;target_figure:151;target_arrow_position:c;presentation_side:right;
+262	 201.226	241	pairing:match;response:same;response_evaluation:correct;rt:1076;
+263	 202.256	251	screen:blank;
+264	 203.259	201	trial_number_absolut:38;trial_number_block:18;
+265	 203.289	211	screen:fixation_cross;
+266	 203.292	51	pairing_selection
+267	 204.739	231	reference_level:3;reference_figure:000;reference_arrow_position:c;presentation_side:left;
+268	 205.739	225	target_level:3;target_figure:150;target_arrow_position:c;presentation_side:right;
+269	 206.942	241	pairing:match;response:same;response_evaluation:correct;rt:1170;
+270	 207.973	251	screen:blank;
+271	 208.976	201	trial_number_absolut:39;trial_number_block:19;
+272	 209.006	211	screen:fixation_cross;
+273	 209.009	1	pairing_selection
+274	 209.839	231	reference_level:1;reference_figure:000;reference_arrow_position:x;presentation_side:left;
+275	 210.839	225	target_level:1;target_figure:050;target_arrow_position:x;presentation_side:right;
+276	 211.733	241	pairing:match;response:same;response_evaluation:correct;rt:869;
+277	 212.756	251	screen:blank;
+278	 213.759	201	trial_number_absolut:40;trial_number_block:20;
+279	 213.789	211	screen:fixation_cross;
+280	 213.792	45	pairing_selection
+281	 215.139	235	reference_level:3;reference_figure:000;reference_arrow_position:b;presentation_side:right;
+282	 216.139	221	target_level:3;target_figure:150;target_arrow_position:b;presentation_side:left;
+283	 216.788	241	pairing:match;response:same;response_evaluation:correct;rt:620;
+284	 217.823	251	screen:blank;
+285	 218.826	112	block_end:2;
+286	 220.280	102	measurement:end;

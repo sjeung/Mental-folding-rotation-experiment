@@ -1,0 +1,5 @@
+  1	   0.018	101	measurement:start;
+  2	   1.113	111	block_start:1;
+  3	   2.154	201	trial_number_absolut:1;trial_number_block:1;
+  4	   2.192	211	screen:fixation_cross;
+  5	   2.197	12	pairing_selection

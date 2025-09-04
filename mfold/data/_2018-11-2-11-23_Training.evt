@@ -1,0 +1,8 @@
+  1	   0.015	101	measurement:start;
+  2	   1.091	111	block_start:1;
+  3	   2.107	201	trial_number_absolut:1;trial_number_block:1;
+  4	   2.153	211	screen:fixation_cross;
+  5	   2.158	117	pairing_selection
+  6	   3.456	237	reference_level:2;reference_figure:000;reference_arrow_position:c;presentation_side:right;
+  7	   4.453	221	target_level:1;target_figure:101;target_arrow_position:z;presentation_side:left;
+  8	   7.219	102	measurement:end;

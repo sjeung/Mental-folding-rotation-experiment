@@ -1,0 +1,30 @@
+Herzlich Willkommen zu unserer heutigen Studie!;Lesen Sie bitte die folgenden Instruktionen aufmerksam durch und stellen Sie Fragen, wenn Ihnen etwas unklar ist.\nEs ist wichtig, dass sie genau verstehen was Sie anschließen im Experiment tun sollen.;
+Zum Ablauf;In diesem Experiment werden Sie Bilder von je zwei Objekten sehen.\nAuf den Objekten befinden sich jeweils zwei schwarze Pfeile.;
+Zum Ablauf;In diesem Experiment werden Sie Bilder von je zwei Objekten sehen.\nAuf den Objekten befinden sich jeweils zwei schwarze Pfeile.\n\nDas eine Objekt ist ein Würfel;2_000_a.jpg
+Zum Ablauf;In diesem Experiment werden Sie Bilder von je zwei Objekten sehen.\nAuf den Objekten befinden sich jeweils zwei schwarze Pfeile.\n\nDas andere Objekt ist die Grundfigur eines auseinandergefalteten Würfels.;2_050_a.jpg
+Zum Ablauf;Es folgt nun eine kurze Demonstration des Testablaufes.;
+Zum Ablauf;Jeder Durchgang startet mit der Darbietung eines Fixationskreuzes.;fixkreuz.jpg
+Zum Ablauf;Kurz danach wird der Würfel auf der linken oder rechten Seite des Bildschirms gezeigt.;2_000_a_fixkreuz.jpg
+Zum Ablauf;Danach wird das zweite Objekt, die Grundfigur, auf der anderen Bildschirmseite gezeigt.;2_000_a_fixkreuz_2_050_a.jpg
+Zum Ablauf;Ihre Aufgabe besteht darin zu entscheiden, ob die Position der Pfeile auf Würfel und Grundfigur identisch ist.;
+Zum Ablauf;Ihre Aufgabe besteht darin zu entscheiden, ob die Position der Pfeile auf Würfel und Grundfigur identisch ist.;2_000_a_fixkreuz_2_050_a.jpg
+Zum Ablauf;Hierzu müssen Sie sich vorstellen die Grundfigur zu einem Würfel zusammen zu falten.\n\nDie blaue Fläche stellt hierbei die Basis des Würfels dar.\nNutzen Sie diese Basis immer als Ausgangspunkt.\nDas bedeutet, dass sie zuerst Felder falten, die direkt an die Basis grenzen.\n\nFalten sie zudem immer nach OBEN.;2_050_a_basis.jpg
+Demonstration Faltprozess;;demo_1.jpg
+Demonstration Faltprozess;;demo_2.jpg
+Demonstration Faltprozess;;demo_3.jpg
+Demonstration Faltprozess;;demo_4.jpg
+Demonstration Faltprozess;;demo_5.jpg
+Demonstration Faltprozess;;demo_6.jpg
+Demonstration Faltprozess;;demo_7.jpg
+Demonstration Faltprozess;;demo_8.jpg
+Demonstration Faltprozess;;demo_11.jpg
+Demonstration Faltprozess;;demo_14.jpg
+Demonstration Faltprozess;;demo_15.jpg
+Demonstration Faltprozess;;2_000_a.jpg
+Zum Ablauf;Das Falten der Grundfigur geschieht nur in Gedanken.\n\nVersuchen Sie sich währenddessen bitte nicht zu bewegen und den Kopf gerade ausgerichtet zu halten.;
+Zum Ablauf;Sobald Sie eine Entscheidung getroffen haben, drücken Sie bitte den entsprechenden Knopf.;cedrus_pad_0.jpg
+Zum Ablauf;Den OBEREN RUNDEN Knopf drücken Sie bitte für IDENTISCHE Pfeilpositionen auf Würfel und Grundfigur.;cedrus_pad_1.jpg
+Zum Ablauf;Den UNTEREN ECKIGEN Knopf drücken Sie bitte für UNTERSCHIEDLICHE Pfeilpositionen auf Würfel und Grundfigur.;cedrus_pad_2.jpg
+Zum Ablauf;Bitte versuchen Sie so korrekt und zügig wie möglich zu antworten!;cedrus_pad_3.jpg
+Zum Ablauf;Haben Sie noch Fragen zum Versuch?\n\nDann wenden Sie sich bitte jetzt an den/die Versuchsleiter*in!;
+Testdurchläufe;Sie werden nun einige Testdurchläufe bearbeiten um sich an die Aufgabe zu gewöhnen.\nWährend dieser Testdurchläufe erhalten Sie eine Rückmeldung über Ihre Antworten. Diese wird in dem darauf folgenden Experimentaldurchgang nicht mehr angezeigt.\n\nArbeiten Sie konzentriert und antworten Sie so schnell wie möglich!;

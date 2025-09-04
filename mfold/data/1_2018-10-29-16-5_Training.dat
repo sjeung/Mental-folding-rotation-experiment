@@ -1,0 +1,4 @@
+Abs_trial_no	Block_number	Trial_number	Iti_duration	Ref_stimSide	Tar_stimSide	Ref_stimulus	Tar_stimulus	Respons_Code	Resp_Correct	Reactio_Time	Nom_refStDur	Act_refStDur
+1	1	1	0.86842	1	-1	51.2	51.1	1	1	10954	1	0.99998
+2	1	2	0.76316	1	-1	49.2	49.1	2	0	582	1	0.99996
+3	1	3	0.71053	-1	1	33.3	33.1	1	0	553	1	0.99999
