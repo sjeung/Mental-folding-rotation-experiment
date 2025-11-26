@@ -107,16 +107,12 @@ for j = 1:nblocks
         mismatch = rand_pairing>100;            %separate mismatch and...
         pairing = rand_pairing-100*mismatch;    %pairing number info
         
-        tarstim = data.prefs.present.pairings_list{1}{pairing};             %targets are in the 1st column
         refstim = data.prefs.present.pairings_list{2+mismatch}{pairing};    %reference stimuli in the 2nd (matches) or 3rd (mismatches)
-        
         rside = rand_refsides(i);               %draw psudo-random reference...
-        tside = rside*(-1);                     %and target side
-
         iti_dur = rand_itis(i);                 %draw psudo-random ITI duration
         
         
-        %% REFSTIM (presented after ITI elapsed)
+        %% Cube net image (presented after ITI elapsed)
         marker_str = [];
         marker_str = [marker_str, ['reference_level:',refstim(1),';']];
         marker_str = [marker_str, ['reference_figure:',refstim(3:5),';']];
@@ -130,29 +126,6 @@ for j = 1:nblocks
         Screen('DrawTexture', data.prefs.screen.window1, reftex, [], [center(1)-ish(1) center(2)-ish(2) center(1)+ish(1) center(2)+ish(2)] + rside*hdisloc*[1 0 1 0]);  %draw texture on screen (with fixation cross)
         [ VBLTimestamp1, StimulusOnsetTime1 ] = Screen('Flip', data.prefs.screen.window1, VBLTimestamp3 + iti_dur, 1, 0);       %flip and keep content in back buffer
         mfold_Markers(1,marker_code,marker_str);
-
-        
-        %% TARGET
-        marker_str = [];
-        marker_str = [marker_str, ['target_level:',tarstim(1),';']];
-        marker_str = [marker_str, ['target_figure:',tarstim(3:5),';']];
-        marker_str = [marker_str, ['target_arrow_position:',tarstim(end),';']];
-        marker_str = [marker_str, ['presentation_side:',side_labels{(tside+1)/2+1},';']];
-        marker_code = m.trial + m.target + m.(side_labels{(tside+1)/2+1}) + m.onset;
-        
-        tarpath = [data.prefs.present.stimpath,tarstim,'.JPG'];
-        tarimg = imread(tarpath);
-        tartex = Screen('MakeTexture', data.prefs.screen.window1, double(tarimg));
-        Screen('DrawTexture', data.prefs.screen.window1, tartex, [], [center(1)-ish(1) center(2)-ish(2) center(1)+ish(1) center(2)+ish(2)] + tside*hdisloc*[1 0 1 0]);
-        %if ~data.prefs.input.UseOfCedrusResponsePad
-        %    DrawFormattedText(data.prefs.screen.window1, 'Gleich <OBEN> oder anders <UNTEN>?', 'center', center(2)+500, data.prefs.screen.colors.standtextcol);                %simultaneous instruction optional
-        %else
-        %    DrawFormattedText(data.prefs.screen.window1, 'Gleich <CENTER> oder anders <DOWN>?', 'center', center(2)+500, data.prefs.screen.colors.standtextcol);
-        %end
-        %Hint: 1000 ms are exactly 60 frames of 16.667 ms; to meat this deadline reliably, time the stimulus onset appr. half a frame backwards
-        [ ~            , StimulusOnsetTime2 ] = Screen('Flip', data.prefs.screen.window1, VBLTimestamp1 + data.prefs.present.refstim_duration - 0.009, [], 0);      %flip but clear everything
-        mfold_Markers(1,marker_code,marker_str);
-        
         
         %% RESPONSE and RT
         if ~data.prefs.input.UseOfCedrusResponsePad     %currently only keyboard as alternative, low latency wireless gaming mouse preferred (e.g. Logitech G305)
@@ -230,9 +203,8 @@ for j = 1:nblocks
         
         %% OUTPUT
         refstim_duration_sot = StimulusOnsetTime2-StimulusOnsetTime1;       %get measured duration of refstim presentation
-        tarstimcode = pairing + 1/10;                                       %code target as pairing number with a '1' as the first decimal
         refstimcode = pairing + (2+mismatch)/10;                            %code reference as pairing number with '2' or '3' as first decimal (corresponding to the paring list entry: row.column)
-        data.output.results(lcount,:) = [lcount, j, i, iti_dur, rside, tside, refstimcode, tarstimcode, response, correct, rt, data.prefs.present.refstim_duration, refstim_duration_sot];
+        data.output.results(lcount,:) = [lcount, j, i, iti_dur, rside, refstimcode,response, correct, rt, data.prefs.present.refstim_duration, refstim_duration_sot];
         
     end
     
