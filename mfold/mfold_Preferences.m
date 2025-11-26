@@ -33,9 +33,9 @@ Screen(data.prefs.screen.window1, 'Flip');
 data.prefs.present.stimpath = 'stim\';      %basic stimuls path (can contain specific sub-folders)
 
 % load all pairings from file (for each target ->1st column, the experiment displays all matches ->2nd column, but only selected mismatches ->3rd column; mismatches see below)
-fid = fopen([data.prefs.present.stimpath,'pairings.txt']);                %open file, deliver handle
-data.prefs.present.pairings_list = textscan(fid,'%s%s%s','Delimiter',',');      %read text from file (3 strings per line separated by ',')
-fclose(fid);                                                                    %close file
+fid = fopen([data.prefs.present.stimpath,'pairings.txt']);                      % open file, deliver handle
+data.prefs.present.pairings_list = textscan(fid,'%s%s%s','Delimiter',',');      % read text from file (3 strings per line separated by ',')
+fclose(fid);                                                                    % close file
 
 % collect file paths of all stimuli
 d = dir([data.prefs.present.stimpath,'*.JPG']);                                 %get all JPG files from stim folder
