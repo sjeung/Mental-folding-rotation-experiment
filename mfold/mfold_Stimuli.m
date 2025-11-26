@@ -27,18 +27,18 @@ Screen(data.prefs.screen.window1, 'Flip');                                      
 % "Press a key..."
 data.stimuli.screen.welcomestring = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);
 if ~data.prefs.input.UseOfCedrusResponsePad
-    data.stimuli.text.welcomestring = 'Bitte eine Taste drücken...';
+    data.stimuli.text.welcomestring = 'Bitte eine Taste drï¿½cken...';
 else
-    data.stimuli.text.welcomestring = 'Bitte den CENTER-Button drücken...';
+    data.stimuli.text.welcomestring = 'Bitte den CENTER-Button drï¿½cken...';
 end
 DrawFormattedText(data.stimuli.screen.welcomestring, data.stimuli.text.welcomestring, 'center', 'center', data.prefs.screen.colors.standtextcol);
 
 % "Press any key to start the experiment..."
 data.stimuli.screen.startstring = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);
 if ~data.prefs.input.UseOfCedrusResponsePad
-    data.stimuli.text.startstring = 'Zum Starten des Versuchs\nbitte eine Taste drücken...';
+    data.stimuli.text.startstring = 'Zum Starten des Versuchs\nbitte eine Taste drï¿½cken...';
 else
-    data.stimuli.text.startstring = 'Zum Starten des Versuchs\nbitte den CENTER-Button drücken...';
+    data.stimuli.text.startstring = 'Zum Starten des Versuchs\nbitte den CENTER-Button drï¿½cken...';
 end
 DrawFormattedText(data.stimuli.screen.startstring, data.stimuli.text.startstring, 'center', 'center', data.prefs.screen.colors.standtextcol, [], [], [], 1.5);
 
@@ -57,46 +57,21 @@ DrawFormattedText(data.stimuli.screen.endstring, data.stimuli.text.endstring, 'c
 % general plot
 data.stimuli.screen.instruct(1) = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);      %creating a list of instruction windows makes it very easy to display all of them via a simple loop (-> mfold_Instructions)
 if ~data.prefs.input.UseOfCedrusResponsePad     %particular key-press instructions for different hardware
-    hardware_string = 'Bitte beurteile jeweils, ob es sich bei dem Zielobjekt (im Vergleich mit dem Referenzobjekt)\num das gleiche <LINKS> oder um ein anderes <RECHTS> Objekt handelt.\nBitte benutze hierfür die entsprechenden Tasten auf der Tastatur.\n';
+    hardware_string = 'Bitte beurteile jeweils, ob es sich bei dem Zielobjekt (im Vergleich mit dem Referenzobjekt)\num das gleiche <LINKS> oder um ein anderes <RECHTS> Objekt handelt.\nBitte benutze hierfï¿½r die entsprechenden Tasten auf der Tastatur.\n';
 else
-    hardware_string = 'Bitte beurteile jeweils, ob es sich bei dem Zielobjekt (im Vergleich mit dem Referenzobjekt)\num das gleiche <CENTER> oder um ein anderes <DOWN> Objekt handelt.\nBitte benutze hierfür die entsprechenden Tasten auf dem Response Pad.\n';
+    hardware_string = 'Bitte beurteile jeweils, ob es sich bei dem Zielobjekt (im Vergleich mit dem Referenzobjekt)\num das gleiche <CENTER> oder um ein anderes <DOWN> Objekt handelt.\nBitte benutze hierfï¿½r die entsprechenden Tasten auf dem Response Pad.\n';
 end
-data.stimuli.text.instruct1 = ['Hier erscheinen gleich Paare [...].\nZunächst erscheint immer ein Referenzobjekt und anschließend das Zielobjekt.\nDas Zielobjekt kann unterschiedlche [...] (es wird ...).\n',hardware_string,'\n\n\n\n\nBitte eine Taste drücken...'];
+data.stimuli.text.instruct1 = ['Hier erscheinen gleich Paare [...].\nZunï¿½chst erscheint immer ein Referenzobjekt und anschlieï¿½end das Zielobjekt.\nDas Zielobjekt kann unterschiedlche [...] (es wird ...).\n',hardware_string,'\n\n\n\n\nBitte eine Taste drï¿½cken...'];
 DrawFormattedText(data.stimuli.screen.instruct(1), data.stimuli.text.instruct1, 'center', 'center', data.prefs.screen.colors.standtextcol, 150, [], [], 1.5, []);
 %%%%% [nx, ny, textbounds] = DrawFormattedText(win, tstring [, sx][, sy][, color][, wrapat][, flipHorizontal][, flipVertical][, vSpacing][, righttoleft])
-
-% additional instructions
-%data.stimuli.screen.instruct(2) = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);
-%data.stimuli.text.instruct2 = '[...]\n\n\n\n\n\nBitte eine Taste drücken...';
-%DrawFormattedText(data.stimuli.screen.instruct(2), data.stimuli.text.instruct2, 'center', 'center', data.prefs.screen.colors.standtextcol, 50, [], [], 1.5, []);
-
-% even more instructions
-%data.stimuli.screen.instruct(3) = ...
-
-
-% %% Fixation Cross
-% data.stimuli.screen.fixation = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);
-% cw = data.prefs.present.cross_halfwidth;
-% Screen('DrawLine', data.stimuli.screen.fixation, data.prefs.screen.colors.standtextcol, data.prefs.screen.center(1)-cw, data.prefs.screen.center(2),    data.prefs.screen.center(1)+cw, data.prefs.screen.center(2));
-% Screen('DrawLine', data.stimuli.screen.fixation, data.prefs.screen.colors.standtextcol, data.prefs.screen.center(1),    data.prefs.screen.center(2)-cw, data.prefs.screen.center(1),    data.prefs.screen.center(2)+cw);
 
 
 %% Pictures
 % determine image dimensions
-imname = data.prefs.present.stimpaths{1};   %get the name of an arbitrary image
-img = imread(imname);                       %read image data (bmp, jpg, png...)
-is_rev = size(img);                         %get pixel dimensions ('rev': Matlab uses [rows,columns] for window positioning, image sizes come the other way around)
-data.prefs.present.ish = is_rev([2 1])*.5;  %half the image size, we need this for later (-> mfold_Core)
-
-% pre-loading images; not advised if too many, and not necessary if enough time between stimuli
-%for j = 1:length(data.prefs.present.stimpaths)
-%    imname = data.prefs.present.stimpaths{j};
-%    img = imread(imname);
-%    data.stimuli.pics{j} = Screen('MakeTexture', data.prefs.screen.window1, double(img));
-%    % drawing images to pre-created offscreen windows (pseudo frame buffers) can speed up image presentation dramatically; works only in full-screen
-%    %data.stimuli.picscreens{j} = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);
-%    %Screen('DrawTexture', data.stimuli.picscreens{j}, data.stimuli.pics{j}, [], [data.prefs.screen.center(1)-ish(1) data.prefs.screen.center(2)-ish(2) data.prefs.screen.center(1)+ish(1) data.prefs.screen.center(2)+ish(2)]);
-%end
+imname = data.prefs.present.stimpaths{1};   % get the name of an arbitrary image
+img = imread(imname);                       % read image data (bmp, jpg, png...)
+is_rev = size(img);                         % get pixel dimensions ('rev': Matlab uses [rows,columns] for window positioning, image sizes come the other way around)
+data.prefs.present.ish = is_rev([2 1])*.5;  % half the image size, we need this for later (-> mfold_Core)
 
 
 %% remove waitstring
