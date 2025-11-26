@@ -34,7 +34,6 @@ else
 end
 
 %markers
-side_labels = {'left','right'};                % stimulus side labels for lsl markers : this needs to be corrected to be always the center
 mismatch_labels = {'match','mismatch'};     
 response_labels = {'match','mismatch','n_a'};  % participants do not judge the sameness but arrow match 
 correct_labels = {'false','correct','n_a'};
@@ -49,10 +48,6 @@ for j = 1:nblocks
     marker_str = ['block_start:',num2str(j),';'];
     marker_code = m.experiment + m.block + m.start;        
     mfold_Markers(1,marker_code,marker_str);
-    
-    % presentation sides for ref stimuli are balanced 50/50 but freely with no relationship to match/mismatch
-    refsides = data.prefs.present.refsides*2-1;             %result is either -1 (left) or +1 (right)
-    rand_refsides = refsides(randperm(length(refsides)));   %randomize order
     
     % elimination of 1/3 of mismatches per block (72 matches vs. 48 mismatches)
     relim = rem(j-1,3)+1;                                   %row eliminator (cycles thour [1,2,3])
@@ -81,15 +76,12 @@ for j = 1:nblocks
         lcount = lcount +1;                     %increment line/trial counter for output matrix
         
         %trial marker
-        marker_str = [];
-        marker_str = [marker_str,['trial_number_absolut:',num2str(lcount),';']];
-        marker_str = [marker_str,['trial_number_block:',num2str(i),';']];
+        marker_str = ['trial_number_absolut:',num2str(lcount),';',['trial_number_block:',num2str(i),';']];
         marker_code = m.trial + m.start;
         mfold_Markers(1,marker_code,marker_str)
         
         %fixation marker
-        marker_str = [];
-        marker_str = [marker_str,['screen:fixation_cross;']];
+        marker_str = 'screen:fixation_cross;';
         marker_code = m.trial + m.fixation + m.onset;
         
         %% Fixation and trial preparation
@@ -108,7 +100,6 @@ for j = 1:nblocks
         pairing = rand_pairing-100*mismatch;    %pairing number info
         
         refstim = data.prefs.present.pairings_list{2+mismatch}{pairing};    %reference stimuli in the 2nd (matches) or 3rd (mismatches)
-        rside = rand_refsides(i);               %draw psudo-random reference...
         iti_dur = rand_itis(i);                 %draw psudo-random ITI duration
         
         
@@ -117,13 +108,12 @@ for j = 1:nblocks
         marker_str = [marker_str, ['reference_level:',refstim(1),';']];
         marker_str = [marker_str, ['reference_figure:',refstim(3:5),';']];
         marker_str = [marker_str, ['reference_arrow_position:',refstim(end),';']];
-        marker_str = [marker_str, ['presentation_side:',side_labels{(rside+1)/2+1},';']];
-        marker_code = m.trial + m.reference + m.(side_labels{(rside+1)/2+1}) + m.(mismatch_labels{mismatch+1}) + m.onset;
+        marker_code = m.trial + m.reference + m.(mismatch_labels{mismatch+1}) + m.onset;
 
         refpath = [data.prefs.present.stimpath,refstim,'.JPG'];                     %assemble refstim path
         refimg = imread(refpath);                                                   %load refstim
         reftex = Screen('MakeTexture', data.prefs.screen.window1, double(refimg));  %draw stim to texture
-        Screen('DrawTexture', data.prefs.screen.window1, reftex, [], [center(1)-ish(1) center(2)-ish(2) center(1)+ish(1) center(2)+ish(2)] + rside*hdisloc*[1 0 1 0]);  %draw texture on screen (with fixation cross)
+        Screen('DrawTexture', data.prefs.screen.window1, reftex, [], [center(1)-ish(1) center(2)-ish(2) center(1)+ish(1) center(2)+ish(2)] + hdisloc*[1 0 1 0]);  %draw texture on screen (with fixation cross)
         [ VBLTimestamp1, StimulusOnsetTime1 ] = Screen('Flip', data.prefs.screen.window1, VBLTimestamp3 + iti_dur, 1, 0);       %flip and keep content in back buffer
         mfold_Markers(1,marker_code,marker_str);
         
@@ -192,8 +182,7 @@ for j = 1:nblocks
             pause(1)                                        %for x seconds
         end
         
-        marker_str = [];
-        marker_str = [marker_str, ['screen:blank;']];
+        marker_str = 'screen:blank;';
         marker_code = m.trial + m.blank + m.onset;
         
         Screen('Flip', data.prefs.screen.window1);
@@ -204,7 +193,7 @@ for j = 1:nblocks
         %% OUTPUT
         refstim_duration_sot = StimulusOnsetTime2-StimulusOnsetTime1;       %get measured duration of refstim presentation
         refstimcode = pairing + (2+mismatch)/10;                            %code reference as pairing number with '2' or '3' as first decimal (corresponding to the paring list entry: row.column)
-        data.output.results(lcount,:) = [lcount, j, i, iti_dur, rside, refstimcode,response, correct, rt, data.prefs.present.refstim_duration, refstim_duration_sot];
+        data.output.results(lcount,:) = [lcount, j, i, iti_dur, refstimcode,response, correct, rt, data.prefs.present.refstim_duration, refstim_duration_sot];
         
     end
     
