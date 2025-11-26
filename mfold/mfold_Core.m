@@ -34,9 +34,9 @@ else
 end
 
 %markers
-side_labels = {'left','right'};                %stimulus side labels for lsl markers
-mismatch_labels = {'match','mismatch'};
-response_labels = {'same','different','n_a'};
+side_labels = {'left','right'};                % stimulus side labels for lsl markers : this needs to be corrected to be always the center
+mismatch_labels = {'match','mismatch'};     
+response_labels = {'match','mismatch','n_a'};  % participants do not judge the sameness but arrow match 
 correct_labels = {'false','correct','n_a'};
 m = data.markers;
 
@@ -45,11 +45,9 @@ m = data.markers;
 
 for j = 1:nblocks
     
-    %mfold_Markers(1,101+j*10,'blockstart');     %code block start as 1x1 + block nr as second digit
-    
-    marker_str = [];
-    marker_str = [marker_str, ['block_start:',num2str(j),';']];
-    marker_code = m.experiment + m.block + m.start;         %see mfold_markers for coding
+    % send block start marker
+    marker_str = ['block_start:',num2str(j),';'];
+    marker_code = m.experiment + m.block + m.start;        
     mfold_Markers(1,marker_code,marker_str);
     
     % presentation sides for ref stimuli are balanced 50/50 but freely with no relationship to match/mismatch
@@ -98,7 +96,7 @@ for j = 1:nblocks
         % draw fixation cross on screen (actually on the back buffer; we have enough time for not using offscreen windows)
         Screen('DrawLine', data.prefs.screen.window1, data.prefs.screen.colors.standtextcol, data.prefs.screen.center(1)-cw, data.prefs.screen.center(2),    data.prefs.screen.center(1)+cw, data.prefs.screen.center(2),    pw);
         Screen('DrawLine', data.prefs.screen.window1, data.prefs.screen.colors.standtextcol, data.prefs.screen.center(1),    data.prefs.screen.center(2)-cw, data.prefs.screen.center(1),    data.prefs.screen.center(2)+cw, pw);
-        %[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+        
         [ VBLTimestamp3,            ~ ] = Screen('Flip', data.prefs.screen.window1, [], 1, 0);    %use 'dontclear=1' so that the cross remains in the back buffer for adding the next stimulus 
                                                                                                         %output time stamps for having a reference point for the first ITI (blank screen)
         mfold_Markers(1,marker_code,marker_str);        %marker for fixation cross
@@ -119,9 +117,6 @@ for j = 1:nblocks
         
         
         %% REFSTIM (presented after ITI elapsed)
-        %refstim: e.g. "1_000_x"
-        %marker_str = ['refstim-',refstim,'-',side_labels{(rside+1)/2+1}];          %prepare refstim marker string for LSL
-        
         marker_str = [];
         marker_str = [marker_str, ['reference_level:',refstim(1),';']];
         marker_str = [marker_str, ['reference_figure:',refstim(3:5),';']];
@@ -134,13 +129,10 @@ for j = 1:nblocks
         reftex = Screen('MakeTexture', data.prefs.screen.window1, double(refimg));  %draw stim to texture
         Screen('DrawTexture', data.prefs.screen.window1, reftex, [], [center(1)-ish(1) center(2)-ish(2) center(1)+ish(1) center(2)+ish(2)] + rside*hdisloc*[1 0 1 0]);  %draw texture on screen (with fixation cross)
         [ VBLTimestamp1, StimulusOnsetTime1 ] = Screen('Flip', data.prefs.screen.window1, VBLTimestamp3 + iti_dur, 1, 0);       %flip and keep content in back buffer
-        %mfold_Markers(1,rand_pairing,marker_str);       %put out marker code and string descriptor
         mfold_Markers(1,marker_code,marker_str);
 
         
         %% TARGET
-        %marker_str = ['tarstim-',tarstim,'-',side_labels{(tside+1)/2+1}];
-        
         marker_str = [];
         marker_str = [marker_str, ['target_level:',tarstim(1),';']];
         marker_str = [marker_str, ['target_figure:',tarstim(3:5),';']];
@@ -159,7 +151,6 @@ for j = 1:nblocks
         %end
         %Hint: 1000 ms are exactly 60 frames of 16.667 ms; to meat this deadline reliably, time the stimulus onset appr. half a frame backwards
         [ ~            , StimulusOnsetTime2 ] = Screen('Flip', data.prefs.screen.window1, VBLTimestamp1 + data.prefs.present.refstim_duration - 0.009, [], 0);      %flip but clear everything
-        %mfold_Markers(1,rand_pairing,marker_str);
         mfold_Markers(1,marker_code,marker_str);
         
         
@@ -194,7 +185,6 @@ for j = 1:nblocks
         correct = mismatch == (response-1);     %mismatch is '0' or '1', responses are '1' or '2' (in this case)
         if (response==-99) || (response==-1)    %in case of missed deadline or wrong or multiple key presses
                 correct = response;             %the important trial outputs are...
-                %rt = response;                  %declared as missing values
         end
         
         %send marker
@@ -212,6 +202,7 @@ for j = 1:nblocks
         marker_str = [marker_str, ['rt:',num2str(rt),';']];
         marker_code = m.trial + m.response + m.(correct_str);
         mfold_Markers(1,marker_code,marker_str);
+        
         %provide feedback for demo runs
         if ~data.input.experiment
             switch correct
@@ -241,37 +232,30 @@ for j = 1:nblocks
         refstim_duration_sot = StimulusOnsetTime2-StimulusOnsetTime1;       %get measured duration of refstim presentation
         tarstimcode = pairing + 1/10;                                       %code target as pairing number with a '1' as the first decimal
         refstimcode = pairing + (2+mismatch)/10;                            %code reference as pairing number with '2' or '3' as first decimal (corresponding to the paring list entry: row.column)
-        %create the header string for the output section 'mfold_Save' (copy/paste it there):
-        %headerString = 'Abs_trial_no\tBlock_number\tTrial_number\tIti_duration\tRef_stimSide\tTar_stimSide\tRef_stimulus\tTar_stimulus\tRespons_Code\tResp_Correct\tReactio_Time\tNom_refStDur\tAct_refStDur\n';
         data.output.results(lcount,:) = [lcount, j, i, iti_dur, rside, tside, refstimcode, tarstimcode, response, correct, rt, data.prefs.present.refstim_duration, refstim_duration_sot];
         
     end
     
-    %mfold_Markers(1,102+j*10,'blockend');           %code block start as 1x2 + block nr as second digit
-    
-    marker_str = [];
-    marker_str = [marker_str, ['block_end:',num2str(j),';']];
-    marker_code = m.experiment + m.block + m.end;         %see mfold_markers for coding
+    marker_str = ['block_end:',num2str(j),';'];
+    marker_code = m.experiment + m.block + m.end;         
     mfold_Markers(1,marker_code,marker_str);
     
     pause(1)
     
     %% Break handling
     if j < nblocks          %make a break after each block but the last one
-        %if ~rem(j,2)       %optionally do this only after every second (or whatever count) block
-            Screen('CopyWindow', data.stimuli.screen.pausestring, data.prefs.screen.window1);
-            Screen(data.prefs.screen.window1, 'Flip');
-            pause(break_duration);      %option to coninue after mandatory period in seconds
-            Screen('CopyWindow', data.stimuli.screen.welcomestring, data.prefs.screen.window1);
-            Screen(data.prefs.screen.window1, 'Flip');
-            if ~data.prefs.input.UseOfCedrusResponsePad
-                KbWait;
-            else
-                mfold_waitForCedrusKey(data.prefs.input.s1,'center');
-            end
-            Screen(data.prefs.screen.window1, 'Flip');
-            pause(1);
-        %end
+        Screen('CopyWindow', data.stimuli.screen.pausestring, data.prefs.screen.window1);
+        Screen(data.prefs.screen.window1, 'Flip');
+        pause(break_duration);      %option to coninue after mandatory period in seconds
+        Screen('CopyWindow', data.stimuli.screen.welcomestring, data.prefs.screen.window1);
+        Screen(data.prefs.screen.window1, 'Flip');
+        if ~data.prefs.input.UseOfCedrusResponsePad
+            KbWait;
+        else
+            mfold_waitForCedrusKey(data.prefs.input.s1,'center');
+        end
+        Screen(data.prefs.screen.window1, 'Flip');
+        pause(1);
     end
     
 end
