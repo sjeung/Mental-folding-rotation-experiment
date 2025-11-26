@@ -2,15 +2,10 @@ function sessionCompleted = mfold_Core
 
 global data
 
-
-%% some settings
-
+%% settings
 if data.prefs.input.UseOfCedrusResponsePad
     s1 = data.prefs.input.s1;                   %get a shortcut
 end
-
-%output preparation
-lcount = 0;                                     %line of data matrix
 
 %short handles for stimulus presentation...
 center = data.prefs.screen.center;
@@ -27,21 +22,20 @@ nmatches = data.prefs.present.nmatches;
 if ~data.input.experiment                       %if demo run,
     nblocks = 2;                                %speed up things for demo or debugging purposes
     break_duration = 5;
-    %ntrials = 2;
 else
     nblocks = data.prefs.present.nblocks;
     break_duration = data.prefs.present.break_duration;
 end
 
 %markers
-mismatch_labels = {'match','mismatch'};     
-response_labels = {'match','mismatch','n_a'};  % participants do not judge the sameness but arrow match 
+mismatch_labels = {'stim_match','stim_mismatch'};     
+response_labels = {'resp_match','resp_mismatch','n_a'};  
 correct_labels = {'false','correct','n_a'};
 m = data.markers;
 
 
 %% central routine
-
+lcount = 0;                                     % initialize trial number counter
 for j = 1:nblocks
     
     % send block start marker
@@ -104,13 +98,9 @@ for j = 1:nblocks
         
         
         %% Cube net image (presented after ITI elapsed)
-        marker_str = [];
-        marker_str = [marker_str, ['reference_level:',refstim(1),';']];
-        marker_str = [marker_str, ['reference_figure:',refstim(3:5),';']];
-        marker_str = [marker_str, ['reference_arrow_position:',refstim(end),';']];
+        marker_str = ['reference_level:' refstim(1) ';reference_figure:' refstim(3:5) ';reference_arrow_position:' refstim(end) ';'];
         marker_code = m.trial + m.reference + m.(mismatch_labels{mismatch+1}) + m.onset;
-
-        refpath = [data.prefs.present.stimpath,refstim,'.JPG'];                     %assemble refstim path
+        refpath = [data.prefs.present.stimpath,refstim,'.JPG'];                     %assemble stim path
         refimg = imread(refpath);                                                   %load refstim
         reftex = Screen('MakeTexture', data.prefs.screen.window1, double(refimg));  %draw stim to texture
         Screen('DrawTexture', data.prefs.screen.window1, reftex, [], [center(1)-ish(1) center(2)-ish(2) center(1)+ish(1) center(2)+ish(2)] + hdisloc*[1 0 1 0]);  %draw texture on screen (with fixation cross)
