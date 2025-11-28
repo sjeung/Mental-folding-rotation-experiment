@@ -40,7 +40,7 @@ angles  = [repelem(0,20,1); repelem(40,20,1); repelem(90,20,1); repelem(40,20,1)
 % column 3 : parity (match Y or mismatch N)
 parity  = [repelem(0,10,1); repelem(1,10,1); repelem(0,10,1); repelem(1,10,1); repelem(0,10,1); repelem(1,10,1); repelem(0,10,1); repelem(1,10,1); repelem(0,10,1); repelem(1,10,1);]; 
 % column 4 : net identify (A to J)
-netID   = repelem([1:10]', 10,1); 
+netID   = repmat([1:10]', 10,1); 
 
 % combine columns
 design = [folds, angles, parity, netID];
