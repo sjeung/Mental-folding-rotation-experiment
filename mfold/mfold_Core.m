@@ -28,7 +28,7 @@ else
 end
 
 %markers
-mismatch_labels = {'stim_match','stim_mismatch'};     
+stim_match_labels = {'stim_match','stim_mismatch'};     
 response_labels = {'resp_match','resp_mismatch','n_a'};  
 correct_labels = {'false','correct','n_a'};
 m = data.markers;
@@ -65,12 +65,12 @@ for j = 1:nblocks
     
     pause(1)
     
-    for i = 1:ntrials
+    for Ti = 1:ntrials
         
         lcount = lcount +1;                     %increment line/trial counter for output matrix
         
         %trial marker
-        marker_str = ['trial_number_absolut:',num2str(lcount),';',['trial_number_block:',num2str(i),';']];
+        marker_str = ['trial_number_absolut:',num2str(lcount),';',['trial_number_block:',num2str(Ti),';']];
         marker_code = m.trial + m.start;
         mfold_Markers(1,marker_code,marker_str)
         
@@ -88,18 +88,18 @@ for j = 1:nblocks
         mfold_Markers(1,marker_code,marker_str);        %marker for fixation cross
         
         % determine stimuli and their screen positions
-        rand_pairing = rand_pairings(i);        %get pairing from randomized list
+        rand_pairing = rand_pairings(Ti);        %get pairing from randomized list
         mfold_Eventlist(rand_pairing,'pairing_selection');
-        mismatch = rand_pairing>100;            %separate mismatch and...
-        pairing = rand_pairing-100*mismatch;    %pairing number info
+        stim_match = rand_pairing>100;            %separate mismatch and...
+        pairing = rand_pairing-100*stim_match;    %pairing number info
         
-        refstim = data.prefs.present.pairings_list{2+mismatch}{pairing};    %reference stimuli in the 2nd (matches) or 3rd (mismatches)
-        iti_dur = rand_itis(i);                 %draw psudo-random ITI duration
+        refstim = data.prefs.present.pairings_list{2+stim_match}{pairing};    %reference stimuli in the 2nd (matches) or 3rd (mismatches)
+        iti_dur = rand_itis(Ti);                 %draw psudo-random ITI duration
         
         
         %% Cube net image (presented after ITI elapsed)
         marker_str = ['reference_level:' refstim(1) ';reference_figure:' refstim(3:5) ';reference_arrow_position:' refstim(end) ';'];
-        marker_code = m.trial + m.reference + m.(mismatch_labels{mismatch+1}) + m.onset;
+        marker_code = m.trial + m.reference + m.(stim_match_labels{stim_match+1}) + m.onset;
         refpath = [data.prefs.present.stimpath,refstim,'.JPG'];                     %assemble stim path
         refimg = imread(refpath);                                                   %load refstim
         reftex = Screen('MakeTexture', data.prefs.screen.window1, double(refimg));  %draw stim to texture
@@ -108,7 +108,7 @@ for j = 1:nblocks
         mfold_Markers(1,marker_code,marker_str);
         
         %% RESPONSE and RT
-        if ~data.prefs.input.UseOfCedrusResponsePad     %currently only keyboard as alternative, low latency wireless gaming mouse preferred (e.g. Logitech G305)
+        if ~data.prefs.input.UseOfCedrusResponsePad  
             [response, rt] = KbGetResponse(data.prefs.input.kb_response_keys, data.prefs.input.response_waittime, data.prefs.input.KbResponse_restrictKeys);
             if response==27, Screen('Flip', data.prefs.screen.window1); disp('User abort, data files incomplete!'), sessionCompleted = 0; return, end   %'escape' immediately ends the core section and thereby the paradigm
         else
@@ -135,14 +135,18 @@ for j = 1:nblocks
         
         %% BLANK / Feedback
         %determine response correctness and assign additional values
-        correct = mismatch == (response-1);     %mismatch is '0' or '1', responses are '1' or '2' (in this case)
-        if (response==-99) || (response==-1)    %in case of missed deadline or wrong or multiple key presses
-                correct = response;             %the important trial outputs are...
+        % response 1 : match 
+        % response 2 : mismatch 
+        % stim match 0 : match 
+        % stim match 1 : mismatch 
+        correct = stim_match == (response-1);       %mismatch is '0' or '1', responses are '1' or '2' (in this case)
+        if (response==-99) || (response==-1)        %in case of missed deadline or wrong or multiple key presses
+                correct = response;                 %the important trial outputs are...
         end
         
         %send marker
         marker_str = [];
-        marker_str = [marker_str, ['pairing:',mismatch_labels{mismatch+1},';']];
+        marker_str = [marker_str, ['pairing:',stim_match_labels{stim_match+1},';']];
         if (correct == -99) || (correct == -1)
             response_str = response_labels{3};
             correct_str = correct_labels{3};
@@ -181,9 +185,9 @@ for j = 1:nblocks
         
         
         %% OUTPUT
-        refstim_duration_sot = StimulusOnsetTime2-StimulusOnsetTime1;       %get measured duration of refstim presentation
-        refstimcode = pairing + (2+mismatch)/10;                            %code reference as pairing number with '2' or '3' as first decimal (corresponding to the paring list entry: row.column)
-        data.output.results(lcount,:) = [lcount, j, i, iti_dur, refstimcode,response, correct, rt, data.prefs.present.refstim_duration, refstim_duration_sot];
+        refstim_duration_sot = NaN;  % StimulusOnsetTime2-StimulusOnsetTime1;         %get measured duration of refstim presentation (SJ : obsolete now?)
+        refstimcode = pairing + (2+stim_match)/10;                            %code reference as pairing number with '2' or '3' as first decimal (corresponding to the paring list entry: row.column)
+        data.output.results(lcount,:) = [lcount, j, Ti, iti_dur, refstimcode,response, correct, rt, data.prefs.present.refstim_duration, refstim_duration_sot];
         
     end
     
