@@ -1,8 +1,9 @@
 function mfold_Preferences
 
 global data;    %get global data var
-
 screens = Screen('Screens'); 
+stimpath    = 'P:\Sein_Jeung\Project_Fold_Rotation\Mental-folding-rotation-experiment\Images\'; 
+
 %% get/set screen parameters and open window
 % screen selection and proportions
 if numel(Screen('Screens'))>1   %if more than one display exists (which should be avoided)...
@@ -28,36 +29,36 @@ Screen(data.prefs.screen.window1, 'FillRect', data.prefs.screen.colors.standback
 Screen(data.prefs.screen.window1, 'Flip');
 
 
+%% Design matrix
+%--------------------------------------------------------------------------
+% 5 blocks x 100 trials 
+
+% column 1 : number of folds (0, 4, or 6 folds)
+folds   = [repelem(0,20,1); repelem(4,40,1); repelem(6,40,1)];
+% column 2 : folding angle (0, 40, or 90 degrees)
+angles  = [repelem(0,20,1); repelem(40,20,1); repelem(90,20,1); repelem(40,20,1); repelem(90,20,1)];
+% column 3 : parity (match Y or mismatch N)
+parity  = [repelem(0,10,1); repelem(1,10,1); repelem(0,10,1); repelem(1,10,1); repelem(0,10,1); repelem(1,10,1); repelem(0,10,1); repelem(1,10,1); repelem(0,10,1); repelem(1,10,1);]; 
+% column 4 : net identify (A to J)
+netID   = repelem([1:10]', 10,1); 
+
+% combine columns
+design = [folds, angles, parity, netID];
+data.prefs.present.design   = design;  
+data.prefs.present.nconds   = 100; 
+data.prefs.present.nblocks  = 5; 
+data.prefs.present.ntrials  = data.prefs.present.nblocks*data.prefs.present.nconds; 
+
+% strings corresponding to numerical codes
+data.prefs.present.paritystrings   = {'Y', 'N'}; 
+data.prefs.present.netIDstrings    = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+
 %% loading/preparation of stimuli
-data.prefs.present.stimpath = 'stim\';      %basic stimuls path (can contain specific sub-folders)
-
-% load all pairings from file (for each target ->1st column, the experiment displays all matches ->2nd column, but only selected mismatches ->3rd column; mismatches see below)
-fid = fopen([data.prefs.present.stimpath,'pairings.txt']);                      % open file, deliver handle
-data.prefs.present.pairings_list = textscan(fid,'%s%s%s','Delimiter',',');      % read text from file (3 strings per line separated by ',')
-fclose(fid);                                                                    % close file
-
-% collect file paths of all stimuli
-d = dir([data.prefs.present.stimpath,'*.JPG']);                                 %get all JPG files from stim folder
-for l = 1:length(d)
-    data.prefs.present.stimpaths{l} = [data.prefs.present.stimpath,d(l).name];   %assemble and collect their complete paths
+%---------------------------------------------------------------------------
+% construct file paths of all stimuli
+for Ii = 1:data.prefs.present.nconds
+    data.prefs.present.stimpaths{Ii} = fullfile(stimpath, ['cube_' num2str(design(Ii,1)) '_', num2str(design(Ii,2)) '_' data.prefs.present.paritystrings{design(Ii,3)+1}, '_' data.prefs.present.netIDstrings{design(Ii,4)}, '.png']);  %assemble and collect their complete paths
 end
-
-% mismatch selection table (randomize columns, discard one line per block, display the other two; re-randomize columns after three blocks)
-data.prefs.present.mismatch_table = dlmread([data.prefs.present.stimpath,'mismatches.txt']);      %delimiter gets auto-determined
-
-% number of trials and blocks
-if ~data.input.experiment               %in case of a demo rund...
-    data.prefs.present.training_trials = dlmread([data.prefs.present.stimpath,'trainingstrials.txt']);    %the conducted trials are pre-selected
-    data.prefs.present.nmatches = sum(data.prefs.present.training_trials<100);      %number of matches (vs. mismatches); numbers > 100 are mismatches (line number of pairing list +100)
-    data.prefs.present.ntrials = length(data.prefs.present.training_trials);        %number of total trials
-else
-    data.prefs.present.nmatches = length(data.prefs.present.pairings_list{1});      %should be 72; each line of the pairing list contans a match to be displayed
-    data.prefs.present.ntrials = data.prefs.present.nmatches + numel(data.prefs.present.mismatch_table)*2/3;    %should be 120 (72+48) for each complete set of match trials only 2/3 of possible mismatches get displayed
-end
-
-% presentation sides for ref stimuli (left/right)
-data.prefs.present.refsides = repmat([0 1],1,data.prefs.present.ntrials/2);         %two stimuli get displayed on the same screen, one left and one right; left/right shall be balanced and order completely randomized (independent of target/reference stimulus)
-
 
 %% graphical presentation parameters
 data.prefs.present.hdisloc = 0;             %how many pixels to present a stimulus off-center (to the left/right)
@@ -79,7 +80,7 @@ data.prefs.present.iti_maxDur = 1.5;        %upper limit
 data.prefs.present.iti_durations = linspace(data.prefs.present.iti_minDur, data.prefs.present.iti_maxDur, data.prefs.present.ntrials);  %create 'ntrials' different steps applied during one block
 
 % block structure
-data.prefs.present.nblocks = 5;             %how many blocks to administer
+data.prefs.present.nblocks = 1;             %how many blocks to administer
 data.prefs.present.break_duration = 60;     %how long at least to pause after each block
 
 
