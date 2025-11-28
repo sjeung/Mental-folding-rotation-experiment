@@ -27,18 +27,18 @@ Screen(data.prefs.screen.window1, 'Flip');                                      
 % "Press a key..."
 data.stimuli.screen.welcomestring = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);
 if ~data.prefs.input.UseOfCedrusResponsePad
-    data.stimuli.text.welcomestring = 'Bitte eine Taste dr�cken...';
+    data.stimuli.text.welcomestring = 'Bitte eine Taste drücken...';
 else
-    data.stimuli.text.welcomestring = 'Bitte den CENTER-Button dr�cken...';
+    data.stimuli.text.welcomestring = 'Bitte den CENTER-Button drücken...';
 end
 DrawFormattedText(data.stimuli.screen.welcomestring, data.stimuli.text.welcomestring, 'center', 'center', data.prefs.screen.colors.standtextcol);
 
 % "Press any key to start the experiment..."
 data.stimuli.screen.startstring = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);
 if ~data.prefs.input.UseOfCedrusResponsePad
-    data.stimuli.text.startstring = 'Zum Starten des Versuchs\nbitte eine Taste dr�cken...';
+    data.stimuli.text.startstring = 'Zum Starten des Versuchs\nbitte eine Taste drücken...';
 else
-    data.stimuli.text.startstring = 'Zum Starten des Versuchs\nbitte den CENTER-Button dr�cken...';
+    data.stimuli.text.startstring = 'Zum Starten des Versuchs\nbitte den CENTER-Button drücken...';
 end
 DrawFormattedText(data.stimuli.screen.startstring, data.stimuli.text.startstring, 'center', 'center', data.prefs.screen.colors.standtextcol, [], [], [], 1.5);
 
@@ -57,11 +57,11 @@ DrawFormattedText(data.stimuli.screen.endstring, data.stimuli.text.endstring, 'c
 % general plot
 data.stimuli.screen.instruct(1) = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);      %creating a list of instruction windows makes it very easy to display all of them via a simple loop (-> mfold_Instructions)
 if ~data.prefs.input.UseOfCedrusResponsePad     %particular key-press instructions for different hardware
-    hardware_string = 'Bitte beurteile jeweils, ob es sich bei dem Zielobjekt (im Vergleich mit dem Referenzobjekt)\num das gleiche <LINKS> oder um ein anderes <RECHTS> Objekt handelt.\nBitte benutze hierf�r die entsprechenden Tasten auf der Tastatur.\n';
+    hardware_string = 'Bitte beurteile jeweils, ob es sich bei dem Zielobjekt (im Vergleich mit dem Referenzobjekt)\num das gleiche <LINKS> oder um ein anderes <RECHTS> Objekt handelt.\nBitte benutze hierfür die entsprechenden Tasten auf der Tastatur.\n';
 else
-    hardware_string = 'Bitte beurteile jeweils, ob es sich bei dem Zielobjekt (im Vergleich mit dem Referenzobjekt)\num das gleiche <CENTER> oder um ein anderes <DOWN> Objekt handelt.\nBitte benutze hierf�r die entsprechenden Tasten auf dem Response Pad.\n';
+    hardware_string = 'Bitte beurteile jeweils, ob es sich bei dem Zielobjekt (im Vergleich mit dem Referenzobjekt)\num das gleiche <CENTER> oder um ein anderes <DOWN> Objekt handelt.\nBitte benutze hierfür die entsprechenden Tasten auf dem Response Pad.\n';
 end
-data.stimuli.text.instruct1 = ['Hier erscheinen gleich Paare [...].\nZun�chst erscheint immer ein Referenzobjekt und anschlie�end das Zielobjekt.\nDas Zielobjekt kann unterschiedlche [...] (es wird ...).\n',hardware_string,'\n\n\n\n\nBitte eine Taste dr�cken...'];
+data.stimuli.text.instruct1 = ['Hier erscheinen gleich Paare [...].\nZunächst erscheint immer ein Referenzobjekt und anschließend das Zielobjekt.\nDas Zielobjekt kann unterschiedlche [...] (es wird ...).\n',hardware_string,'\n\n\n\n\nBitte eine Taste drücken...'];
 DrawFormattedText(data.stimuli.screen.instruct(1), data.stimuli.text.instruct1, 'center', 'center', data.prefs.screen.colors.standtextcol, 150, [], [], 1.5, []);
 %%%%% [nx, ny, textbounds] = DrawFormattedText(win, tstring [, sx][, sy][, color][, wrapat][, flipHorizontal][, flipVertical][, vSpacing][, righttoleft])
 
