@@ -60,7 +60,7 @@ data.prefs.present.refsides = repmat([0 1],1,data.prefs.present.ntrials/2);     
 
 
 %% graphical presentation parameters
-data.prefs.present.hdisloc = 400;           %how many pixels to present a stimulus off-center (to the left/right)
+data.prefs.present.hdisloc = 0;             %how many pixels to present a stimulus off-center (to the left/right)
 data.prefs.present.cross_halfwidth = 50;    %dimensions of fixation cross (half the length of its lines)
 data.prefs.present.cross_penwidth = 5;      %width of cross lines
 
