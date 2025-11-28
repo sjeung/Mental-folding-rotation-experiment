@@ -14,8 +14,6 @@ vSpacing = 1;
 winRect = [100 150 1820 980];
 boffset = 100;
 bhint_line = 1050;
-%global ptb_drawformattedtext_disableClipping;
-%ptb_drawformattedtext_disableClipping = 1;
 
 %image settings
 icenter = data.prefs.screen.center + [0 200];

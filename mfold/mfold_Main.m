@@ -11,6 +11,9 @@ sca;            %Screen('CloseAll') from PsychToolbox (PTB)
 rng('default')  %reset random number generator
 rng('shuffle')
 
+% set default font size
+fontsize = 30; 
+
 global data     %create global data var (containing settings and timing parameters, input, and output)
 
 try
@@ -23,20 +26,11 @@ try
     
     %% PTB Preferences
     %  The following section contains various setting determining how the PTB initializes and runs. Due to their importance they have been placed at the very beginning instead of the experiment's preferences section.
-    % if ~data.input.experiment       %in case of a demo run...
-    %     Screen('Preference', 'SkipSyncTests', 1);   %whether or not to omit crucial PTB timing tests of the display pipeline (omitting can be helpful for development on unoptimized hardware)
-    %     Screen('Preference', 'Verbosity', 5);       %determine the amount of diagnostic output by PTB; should be '0' in the actual experiment
-    % else
     Screen('Preference', 'SkipSyncTests', 0);       %if sync tests are skipped, offscreen windows don't seem to work properly
     Screen('Preference', 'Verbosity', 0);
-    % end
-    %[maxStddev, minSamples, maxDeviation, maxDuration] = Screen('Preference', 'SyncTestSettings' [, maxStddev=0.001 secs][, minSamples=50][, maxDeviation=0.1][, maxDuration=5 secs]);
     [data.PTBdiag.SyncTestSettings.maxStddev, data.PTBdiag.SyncTestSettings.minSamples, data.PTBdiag.SyncTestSettings.maxDeviation, data.PTBdiag.SyncTestSettings.maxDuration] = ...
         Screen('Preference', 'SyncTestSettings', 0.0003, 120, 0.01, 5);     %settings for above-mentioned timing tests; will be executed on window opening
-    %Screen('Preference', 'VBLTimestampingMode', 1);%workaround for certain display isues/anomalities; don't use unless you know what you are doing
-    Screen('Preference', 'DefaultFontSize', 48);    %default font size for any text drawn in PsychToolbox windows
-    %InitializePsychSound(1)        %we would need this for audio stimulation
-    
+    Screen('Preference', 'DefaultFontSize', fontsize);    %default font size for any text drawn in PsychToolbox windows
     
     %% Variables
     mfold_Preferences;              %process the program's preferences
@@ -65,20 +59,12 @@ try
     
     
     %% parts involving user interaction
-    if ~userAbort
-        
-        
-        %% Instructions
-        userAbort = mfold_Instructions;         %the participant's response to the final 'startstring' ("Press a button to start the experiment...") logs the start time and sets the 'experiment-start' marker
-        
-    end
+    data.output.startMeasurement = GetSecs;
+    %userAbort = mfold_Instructions;         %the participant's response to the final 'startstring' ("Press a button to start the experiment...") logs the start time and sets the 'experiment-start' marker
     
+    %% Procedure
     if ~userAbort
-        
-        
-        %% Procedure
         sessionComplete = mfold_Core;
-        
     else
         sessionComplete = 0;
     end
