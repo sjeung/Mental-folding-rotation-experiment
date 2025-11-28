@@ -1,10 +1,8 @@
-function userAbort = mfold_Instructions
+function mfold_Instructions
 
 global data
 
 %% preparation
-
-userAbort = 0;
 
 %text settings
 hsize = 72;
@@ -90,7 +88,6 @@ while ~done
         if ~data.prefs.input.UseOfCedrusResponsePad                                             %if no special hardware used
             [~, keyCode] = KbWait;                                                                             %wait for keyboard
             if any(find(keyCode)==27)
-                userAbort = 1;
                 Screen(data.prefs.screen.window1, 'Flip');
                 return
             end
@@ -106,7 +103,6 @@ while ~done
             if strcmp(pressed_key,'south')
                 iter = iter-numel(repset);
             elseif strcmp(pressed_key,'escape')
-                userAbort = 1;
                 Screen(data.prefs.screen.window1, 'Flip');
                 return
             end
