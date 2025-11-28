@@ -40,7 +40,6 @@ fclose(fid);                                                                    
 % collect file paths of all stimuli
 d = dir([data.prefs.present.stimpath,'*.JPG']);                                 %get all JPG files from stim folder
 for l = 1:length(d)
-    %data.prefs.present.stimpaths{l} = [d(l).folder,'\',d(l).name];              %'d(l).folder' does not work with older Matlab versions
     data.prefs.present.stimpaths{l} = [data.prefs.present.stimpath,d(l).name];   %assemble and collect their complete paths
 end
 
@@ -89,9 +88,7 @@ data.prefs.present.break_duration = 60;     %how long at least to pause after ea
 data.prefs.input.response_waittime = -1;        %maximum allowed response time (RT); '-1': indefinite
 
 % keyboard settings
-%data.prefs.input.kb_response_keys = [37; 39];      %37: left arrow, 39: right arrow; the following code...
-                                                    %shows Key Codes: WaitSecs(1);[~,keyCode]=KbWait; find(keyCode)
-data.prefs.input.kb_response_keys = [101,12;98,40]; %num pad: '5' for 'same', '2' for 'different'
+data.prefs.input.kb_response_keys = [37, 39];
 
 if ~data.input.experiment
     data.prefs.input.KbResponse_restrictKeys = 0;
@@ -100,7 +97,7 @@ elseif data.input.experiment
 end
 
 % specialized input hardware
-data.prefs.input.UseOfCedrusResponsePad = 0;    %if not, keyboard is used for everything
+data.prefs.input.UseOfCedrusResponsePad = 1;    %if not, keyboard is used for everything
 data.prefs.input.COMX = 'COM4';                 %see 'mfold_CedrusResponsePadPreparation.m' for further notes on how to use the response pad
 
 % result collection for output
