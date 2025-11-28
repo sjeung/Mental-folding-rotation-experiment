@@ -100,7 +100,7 @@ elseif data.input.experiment
 end
 
 % specialized input hardware
-data.prefs.input.UseOfCedrusResponsePad = 1;    %if not, keyboard is used for everything
+data.prefs.input.UseOfCedrusResponsePad = 0;    %if not, keyboard is used for everything
 data.prefs.input.COMX = 'COM4';                 %see 'mfold_CedrusResponsePadPreparation.m' for further notes on how to use the response pad
 
 % result collection for output
