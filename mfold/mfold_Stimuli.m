@@ -2,19 +2,6 @@ function mfold_Stimuli
 
 global data
 
-
-%% PTB text preferences
-% Possible PTB settings: 
-% oldEnableFlag         = Screen('Preference', 'TextAlphaBlending',                 [enableFlag]);
-% oldSize               = Screen('Preference', 'DefaultFontSize',                   [fontSize]);
-% oldStyleFlag          = Screen('Preference', 'DefaultFontStyle',                  [styleFlag]);
-% oldfontName           = Screen('Preference', 'DefaultFontName',                   [fontName]);
-% oldEnableFlag         = Screen('Preference', 'DefaultTextYPositionIsBaseline',    [enableFlag]);
-% oldEnableFlag         = Screen('Preference', 'TextAntiAliasing',                  [enableFlag=-1 (System setting), 0 = Disable, 1 = Enable, 2 = EnableHighQuality]);
-% oldEnableFlag         = Screen('Preference', 'TextRenderer',                      [enableFlag=0 (Default OS-specific [fast]), 1 = HighQ OS-specific]);
-% oldLocaleNameString   = Screen('Preference', 'TextEncodingLocale',                [newLocalenNameString]);
-
-
 %% Repeated modules
 % "Please wait..."
 data.stimuli.screen.waitstring = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);           %open an offscreen window

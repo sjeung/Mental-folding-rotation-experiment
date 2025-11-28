@@ -52,9 +52,8 @@ try
     % Currently there is a bug in the pad introducing a time drift due to repeated response. Therefore it is not recommended using this pad for multiple consecutive time measurements as in tapping experiments.
     % 
     % And always CLEAR THE BUFFER as well, as the pad creates events for button presses as well as releases (the latter would remain in the cue!)
-    userAbort = 0;
-    if data.prefs.input.UseOfCedrusResponsePad
-        userAbort = mfold_CedrusResponsePadPreparation;
+     if data.prefs.input.UseOfCedrusResponsePad
+        mfold_CedrusResponsePadPreparation;
     end
     
     
@@ -63,25 +62,14 @@ try
     %userAbort = mfold_Instructions;         %the participant's response to the final 'startstring' ("Press a button to start the experiment...") logs the start time and sets the 'experiment-start' marker
     
     %% Procedure
-    if ~userAbort
-        sessionComplete = mfold_Core;
-    else
-        sessionComplete = 0;
-    end
-    
-    if ~sessionComplete
-        marker_str = [];
-        marker_str = [marker_str,'measurement:abort;'];
-        mfold_Markers(1,0,marker_str);    %sending a corresponding marker (with eventlist entry and so on)
-    end
-    
-    
+    sessionComplete = mfold_Core;
+
     %% Saving
     mfold_Save;                     % save all data including the 'data' struct variable to several files
     
     
     %% De-initialize Markers
-    mfold_Markers(2);               %de-initialize the marker system with the parameter '2'
+    mfold_Markers(2);               % de-initialize the marker system with the parameter '2'
     
     
     %% End

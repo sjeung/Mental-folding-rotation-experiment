@@ -114,8 +114,6 @@ while ~done
     else
         pause(1)
     end
-    %Screen(data.prefs.screen.window1, 'Flip');                                              %remove it
-    %pause(1)                                                                                %wait a sec
     
 end
 

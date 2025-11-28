@@ -15,7 +15,6 @@ data.prefs.screen.center = data.prefs.screen.scrsz(3:4)/2;
 
 %open the window
 data.prefs.screen.window1 = Screen(data.prefs.screen.whichScreen, 'OpenWindow');    %no 'rect' specied means 'fullscreen'
-%data.prefs.present.hz = Screen('NominalFrameRate', data.prefs.screen.window1);     %get the nominal frame rate of the display, usually not needed
 
 %define some basic colors
 data.prefs.screen.colors.white = WhiteIndex(data.prefs.screen.window1);     % pixel value for white (might differ from 255)
