@@ -88,7 +88,7 @@ data.prefs.present.break_duration = 60;     %how long at least to pause after ea
 data.prefs.input.response_waittime = -1;        %maximum allowed response time (RT); '-1': indefinite
 
 % keyboard settings
-data.prefs.input.kb_response_keys = [37, 39];
+data.prefs.input.kb_response_keys = [37; 39];
 
 if ~data.input.experiment
     data.prefs.input.KbResponse_restrictKeys = 0;
