@@ -54,6 +54,14 @@ for j = 1:nblocks
 
     pause(1)
     
+    % bgcolor
+    imgpath = data.prefs.present.stimpaths{1};                      % path to image
+    img = imread(imgpath);                                          % load stim
+    img = img(:, data.prefs.screen.scrsz(3)*0.2:data.prefs.screen.scrsz(3)*0.8, :);
+    leftEdge = img(:,1,:);       % all rows, first column
+    bgColor = round(mean(reshape(leftEdge, [], 3), 1));  % average RGB
+    [imgH, imgW, ~] = size(img);
+    
     for Ti = 1:ntrials
         
         lcount      = lcount +1;                     %increment line/trial counter for output matrix
@@ -70,6 +78,9 @@ for j = 1:nblocks
         marker_str = ['trial_number_absolut:',num2str(lcount),';',['trial_number_block:',num2str(Ti),';']];
         marker_code = m.trial + m.start;
         mfold_Markers(1,marker_code,marker_str)
+        
+        % background
+        Screen('FillRect',data.prefs.screen.window1, bgColor);
         
         %fixation marker
         marker_str = 'screen:fixation_cross;';
@@ -90,10 +101,18 @@ for j = 1:nblocks
         %% Cube net image (presented after ITI elapsed)
         marker_str = ['fold:' num2str(fold), ';angle:', num2str(angle) ';meet:' data.prefs.present.paritystrings{parity+1}, ';net:' data.prefs.present.netIDstrings{netID} ';'];
         marker_code = m.trial + parity + m.onset;
-        imgpath = data.prefs.present.stimpaths{row_ind}                    % path to image
+        imgpath = data.prefs.present.stimpaths{row_ind};                      % path to image
         img = imread(imgpath);                                                % load stim
+        img = img(:, data.prefs.screen.scrsz(3)*0.2:data.prefs.screen.scrsz(3)*0.8, :);
+        [imgH, imgW, ~] = size(img);
+        Screen('FillRect',data.prefs.screen.window1, bgColor);
         tex = Screen('MakeTexture', data.prefs.screen.window1, double(img));  % draw stim to texture
-        Screen('DrawTexture', data.prefs.screen.window1, tex, [], [center(1)-ish(1) center(2)-ish(2) center(1)+ish(1) center(2)+ish(2)] + hdisloc*[1 0 1 0]);  %draw texture on screen (with fixation cross)
+        
+        % Compute destination rect using original size (or scale if needed)
+        dstRect = [center(1)-imgW/2, center(2)-imgH/2, center(1)+imgW/2, center(2)+imgH/2] + hdisloc*[1 0 1 0];
+        Screen('DrawTexture', data.prefs.screen.window1, tex, [], dstRect);
+
+%        Screen('DrawTexture', data.prefs.screen.window1, tex, [], [center(1)-ish(1) center(2)-ish(2) center(1)+ish(1) center(2)+ish(2)] + hdisloc*[1 0 1 0]);  %draw texture on screen (with fixation cross)
         [ VBLTimestamp1, StimulusOnsetTime1 ] = Screen('Flip', data.prefs.screen.window1, VBLTimestamp3 + iti_dur, 1, 0);       %flip and keep content in back buffer
         mfold_Markers(1,marker_code,marker_str);
         
