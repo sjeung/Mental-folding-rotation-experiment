@@ -80,7 +80,7 @@ data.prefs.present.iti_maxDur = 1.5;        %upper limit
 data.prefs.present.iti_durations = linspace(data.prefs.present.iti_minDur, data.prefs.present.iti_maxDur, data.prefs.present.ntrials);  %create 'ntrials' different steps applied during one block
 
 % block structure
-data.prefs.present.nblocks = 1;             %how many blocks to administer
+data.prefs.present.nblocks = 5;             %how many blocks to administer
 data.prefs.present.break_duration = 60;     %how long at least to pause after each block
 
 
