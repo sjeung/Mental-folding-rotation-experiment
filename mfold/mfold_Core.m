@@ -62,7 +62,7 @@ for j = 1:nblocks
     bgColor = round(mean(reshape(leftEdge, [], 3), 1));  % average RGB
     [imgH, imgW, ~] = size(img);
     
-    for Ti = 1:ntrials
+    for Ti = 1:data.prefs.present.nconds
         
         lcount      = lcount +1;                     %increment line/trial counter for output matrix
         
