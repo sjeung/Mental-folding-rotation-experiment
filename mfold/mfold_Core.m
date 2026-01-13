@@ -57,7 +57,7 @@ for j = 1:nblocks
     % bgcolor
     imgpath = data.prefs.present.stimpaths{1};                      % path to image
     img = imread(imgpath);                                          % load stim
-    img = img(:, data.prefs.screen.scrsz(3)*0.2:data.prefs.screen.scrsz(3)*0.8, :);
+    img = img(:, size(img,2)*0.2:size(img,2)*0.8, :);
     leftEdge = img(:,1,:);       % all rows, first column
     bgColor = round(mean(reshape(leftEdge, [], 3), 1));  % average RGB
     [imgH, imgW, ~] = size(img);
@@ -103,7 +103,7 @@ for j = 1:nblocks
         marker_code = m.trial + parity + m.onset;
         imgpath = data.prefs.present.stimpaths{row_ind};                      % path to image
         img = imread(imgpath);                                                % load stim
-        img = img(:, data.prefs.screen.scrsz(3)*0.2:data.prefs.screen.scrsz(3)*0.8, :);
+        img = img(:, size(img,2)*0.2:size(img,2)*0.8, :);
         [imgH, imgW, ~] = size(img);
         Screen('FillRect',data.prefs.screen.window1, bgColor);
         tex = Screen('MakeTexture', data.prefs.screen.window1, double(img));  % draw stim to texture
