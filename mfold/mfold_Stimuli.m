@@ -5,7 +5,7 @@ global data
 %% Repeated modules
 % "Please wait..."
 data.stimuli.screen.waitstring = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);           %open an offscreen window
-data.stimuli.text.waitstring = 'Bitte warten...';                                                                                               %define the text as a string
+data.stimuli.text.waitstring = 'Please wait...';                                                                                               %define the text as a string
 DrawFormattedText(data.stimuli.screen.waitstring, data.stimuli.text.waitstring, 'center', 'center', data.prefs.screen.colors.standtextcol);     %draw this text to the offscreen window
 % immediately display the above text (during stimulus preparation, which might take a while if pre-loading images to RAM)
 Screen('CopyWindow', data.stimuli.screen.waitstring, data.prefs.screen.window1);    %fast method of swapping out visual content in the back buffer
@@ -14,29 +14,29 @@ Screen(data.prefs.screen.window1, 'Flip');                                      
 % "Press a key..."
 data.stimuli.screen.welcomestring = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);
 if ~data.prefs.input.UseOfCedrusResponsePad
-    data.stimuli.text.welcomestring = 'Bitte eine Taste drücken...';
+    data.stimuli.text.welcomestring = 'Please press a key...';
 else
-    data.stimuli.text.welcomestring = 'Bitte den CENTER-Button drücken...';
+    data.stimuli.text.welcomestring = 'Please press the center button...';
 end
 DrawFormattedText(data.stimuli.screen.welcomestring, data.stimuli.text.welcomestring, 'center', 'center', data.prefs.screen.colors.standtextcol);
 
 % "Press any key to start the experiment..."
 data.stimuli.screen.startstring = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);
 if ~data.prefs.input.UseOfCedrusResponsePad
-    data.stimuli.text.startstring = 'Zum Starten des Versuchs\nbitte eine Taste drücken...';
+    data.stimuli.text.startstring = 'To start the experiment \nplease start a button ...';
 else
-    data.stimuli.text.startstring = 'Zum Starten des Versuchs\nbitte den CENTER-Button drücken...';
+    data.stimuli.text.startstring = 'To start the experiment \nplease start the center button ......';
 end
 DrawFormattedText(data.stimuli.screen.startstring, data.stimuli.text.startstring, 'center', 'center', data.prefs.screen.colors.standtextcol, [], [], [], 1.5);
 
 % "Please take a break of at least [...] seconds."
 data.stimuli.screen.pausestring = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);
-data.stimuli.text.pausestring = ['Bitte ',num2str(data.prefs.present.break_duration),' Sekunden Pause machen.'];
+data.stimuli.text.pausestring = ['Please rest for ',num2str(data.prefs.present.break_duration),' seconds.'];
 DrawFormattedText(data.stimuli.screen.pausestring, data.stimuli.text.pausestring, 'center', 'center', data.prefs.screen.colors.standtextcol);
 
 % "Thank you!"
 data.stimuli.screen.endstring = Screen('OpenOffscreenWindow', data.prefs.screen.whichScreen, data.prefs.screen.colors.standbackcol);
-data.stimuli.text.endstring = 'Vielen Dank!';
+data.stimuli.text.endstring = 'Thank you! Experiment completed';
 DrawFormattedText(data.stimuli.screen.endstring, data.stimuli.text.endstring, 'center', 'center', data.prefs.screen.colors.standtextcol);
 
 

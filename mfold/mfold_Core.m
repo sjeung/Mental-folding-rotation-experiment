@@ -173,13 +173,13 @@ for j = 1:nblocks
         if ~data.input.experiment
             switch correct
                 case -99    %missed deadline (max rt elapsed)
-                    DrawFormattedText(data.prefs.screen.window1, 'Fehler, Zeit verstrichen.', 'center', 'center', [255 255 255]);
+                    DrawFormattedText(data.prefs.screen.window1, 'Timeout, response too late.', 'center', 'center', [255 255 255]);
                 case -1     %wrong or multiple keys pressed
-                    DrawFormattedText(data.prefs.screen.window1, 'Fehler, falsche Taste.', 'center', 'center', [255 255 255]);
+                    DrawFormattedText(data.prefs.screen.window1, 'Error, wrong key pressed.', 'center', 'center', [255 255 255]);
                 case 0      %false response
-                    DrawFormattedText(data.prefs.screen.window1, 'FALSCH!', 'center', data.prefs.screen.center(2) - 200, [240 50 50]); % 200 is the vertical offset from center
+                    DrawFormattedText(data.prefs.screen.window1, 'WRONG', 'center', data.prefs.screen.center(2) - 200, [240 50 50]); % 200 is the vertical offset from center
                 case 1      %correct response
-                    DrawFormattedText(data.prefs.screen.window1, 'RICHTIG!', 'center', data.prefs.screen.center(2) - 200, [50 240 50]);
+                    DrawFormattedText(data.prefs.screen.window1, 'CORRECT', 'center', data.prefs.screen.center(2) - 200, [50 240 50]);
             end
             Screen('Flip', data.prefs.screen.window1);      %display feedback...
             pause(1)                                        %for x seconds

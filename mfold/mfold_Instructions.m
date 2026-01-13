@@ -65,7 +65,7 @@ while ~done
     if ~ismember(i,repset)
         Screen('TextSize',  data.prefs.screen.window1, fsize);
         if ~data.prefs.input.UseOfCedrusResponsePad
-            DrawFormattedText(data.prefs.screen.window1, 'bitte eine Taste drücken', 1500, bhint_line, data.prefs.screen.colors.standtextcol);
+            DrawFormattedText(data.prefs.screen.window1, 'please press a button', 1500, bhint_line, data.prefs.screen.colors.standtextcol);
         else
             DrawFormattedText(data.prefs.screen.window1, 'bitte den CENTER-Button drücken', 1350, bhint_line, data.prefs.screen.colors.standtextcol);
         end
