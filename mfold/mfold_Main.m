@@ -7,6 +7,7 @@
 
                               
 %% Preparation
+addpath(genpath('P:\Sein_Jeung\Tools\liblsl-Matlab-1.14.0'))
 sca;            %Screen('CloseAll') from PsychToolbox (PTB)
 rng('default')  %reset random number generator
 rng('shuffle')
@@ -21,7 +22,7 @@ try
     
     %% Input
     mfold_Input;    %get run parameters and participant demographics
-    HideCursor;     %type 'ShowCursor' to restore
+  %  HideCursor;     %type 'ShowCursor' to restore
     
     
     %% PTB Preferences
@@ -31,7 +32,7 @@ try
     [data.PTBdiag.SyncTestSettings.maxStddev, data.PTBdiag.SyncTestSettings.minSamples, data.PTBdiag.SyncTestSettings.maxDeviation, data.PTBdiag.SyncTestSettings.maxDuration] = ...
         Screen('Preference', 'SyncTestSettings', 0.0003, 120, 0.01, 5);     %settings for above-mentioned timing tests; will be executed on window opening
     Screen('Preference', 'DefaultFontSize', fontsize);    %default font size for any text drawn in PsychToolbox windows
-    
+      
     %% Variables
     mfold_Preferences;              %process the program's preferences
     
