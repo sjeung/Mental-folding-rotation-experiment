@@ -21,7 +21,7 @@ cw = data.prefs.present.cross_halfwidth;
 pw = data.prefs.present.cross_penwidth;
 
 %and trial structure parameters
-ntrials = data.prefs.present.ntrials;
+nTrialsInBlock = data.prefs.present.nconds;
 
 if ~data.input.experiment                       %if demo run,
     nblocks = 1;                                %speed up things for demo or debugging purposes
@@ -31,26 +31,42 @@ else
     break_duration = data.prefs.present.break_duration;
 end
 
-%markers
-stim_match_labels = {'stim_match','stim_mismatch'};     
+%markers    
 response_labels = {'resp_match','resp_mismatch','n_a'};  
 correct_labels = {'false','correct','n_a'};
 m = data.markers;
 
+% wait for keypress before start 
+Screen('CopyWindow', data.stimuli.screen.welcomestring, data.prefs.screen.window1);
+Screen(data.prefs.screen.window1, 'Flip');
+if ~data.prefs.input.UseOfCedrusResponsePad
+    KbWait;
+else
+    mfold_waitForCedrusKey(data.prefs.input.s1,'center');
+end
+Screen(data.prefs.screen.window1, 'Flip');
+pause(1);
+
 
 %% central routine
-lcount = 0;                                     % initialize trial number counter
+lcount              = 0; % initialize trial number counter
+
 for j = 1:nblocks
     
-    % randomisation 
-    rand_inds = randperm(data.prefs.present.nconds); 
-    rand_itis = data.prefs.present.iti_durations(randperm(ntrials)); %nicht mit demselben randomizer, sonst h?tten immer die gleichen Reize die kurzen/langen ITIs
+    % randomisation
+    if data.input.experiment
+        rand_inds = randperm(nTrialsInBlock);
+    else
+        rand_inds       = [1,12,23,34,45,56,67,78,89,100]; % hardcode stimuli for practice trials 
+        nTrialsInBlock  = numel(rand_inds); 
+        correctTotal    = 0; 
+    end
+    rand_itis = data.prefs.present.iti_durations(randperm(nTrialsInBlock)); %nicht mit demselben randomizer, sonst h?tten immer die gleichen Reize die kurzen/langen ITIs
         
     % send block start marker
     marker_str = ['block_start:',num2str(j),';'];
     marker_code = m.experiment + m.block + m.start;        
     mfold_Markers(1,marker_code,marker_str);
-
 
     pause(1)
     
@@ -60,9 +76,8 @@ for j = 1:nblocks
     img = img(:, size(img,2)*0.2:size(img,2)*0.8, :);
     leftEdge = img(:,1,:);       % all rows, first column
     bgColor = round(mean(reshape(leftEdge, [], 3), 1));  % average RGB
-    [imgH, imgW, ~] = size(img);
     
-    for Ti = 1:data.prefs.present.nconds
+    for Ti = 1:nTrialsInBlock 
         
         lcount      = lcount +1;                     %increment line/trial counter for output matrix
         
@@ -112,7 +127,6 @@ for j = 1:nblocks
         dstRect = [center(1)-imgW/2, center(2)-imgH/2, center(1)+imgW/2, center(2)+imgH/2] + hdisloc*[1 0 1 0];
         Screen('DrawTexture', data.prefs.screen.window1, tex, [], dstRect);
 
-%        Screen('DrawTexture', data.prefs.screen.window1, tex, [], [center(1)-ish(1) center(2)-ish(2) center(1)+ish(1) center(2)+ish(2)] + hdisloc*[1 0 1 0]);  %draw texture on screen (with fixation cross)
         [ VBLTimestamp1, StimulusOnsetTime1 ] = Screen('Flip', data.prefs.screen.window1, VBLTimestamp3 + iti_dur, 1, 0);       %flip and keep content in back buffer
         mfold_Markers(1,marker_code,marker_str);
         
@@ -180,7 +194,9 @@ for j = 1:nblocks
                     DrawFormattedText(data.prefs.screen.window1, 'WRONG', 'center', data.prefs.screen.center(2) - 200, [240 50 50]); % 200 is the vertical offset from center
                 case 1      %correct response
                     DrawFormattedText(data.prefs.screen.window1, 'CORRECT', 'center', data.prefs.screen.center(2) - 200, [50 240 50]);
+                    correctTotal = correctTotal + 1; 
             end
+            disp(['N correct trials = ' nume2str(correctTotal) ' out of ' num2str(Ti)])
             Screen('Flip', data.prefs.screen.window1);      %display feedback...
             pause(1)                                        %for x seconds
         end
