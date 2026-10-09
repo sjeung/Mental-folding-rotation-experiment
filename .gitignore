@@ -8,3 +8,21 @@ mfold/stim/instructions-old.txt
 instructionsMRF'26.pptx
 *.db
 *.db
+/materials
+*.db
+.DS_Store
+Images/Thumbs.db
+Images/Thumbs.db
+mfold/.DS_Store
+mfold/.DS_Store
+Images/Thumbs.db
+/Stimuli Creation/Images
+/Stimuli Creation/MFR_stimuli_Unity/Assets/Screenshots
+/Stimuli Creation/MFR_stimuli_Unity/Library
+/Stimuli Creation/MFR_stimuli_Unity/.vs/Stimlus/v15/Server
+/Stimuli Creation/MFR_stimuli_Unity/.vs
+/Stimuli Creation/MFR_stimuli_Unity/Logs
+/Stimuli Creation/MFR_stimuli_Unity/obj
+
+Images/Thumbs.db
+/Images
