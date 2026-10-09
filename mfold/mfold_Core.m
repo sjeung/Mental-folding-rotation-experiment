@@ -196,7 +196,7 @@ for j = 1:nblocks
                     DrawFormattedText(data.prefs.screen.window1, 'CORRECT', 'center', data.prefs.screen.center(2) - 200, [50 240 50]);
                     correctTotal = correctTotal + 1; 
             end
-            disp(['N correct trials = ' nume2str(correctTotal) ' out of ' num2str(Ti)])
+            disp(['N correct trials = ' num2str(correctTotal) ' out of ' num2str(Ti)])
             Screen('Flip', data.prefs.screen.window1);      %display feedback...
             pause(1)                                        %for x seconds
         end
