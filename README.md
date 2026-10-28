@@ -15,6 +15,7 @@ DOI: 10.22541/au.172115498.85907966/v1
 
 **Credit**    
 Original scripts in folder "mfold" were created by Benjamin Paulisch, Leonie Raddatz, Christopher Hilton     
-Modified by Sein Jeung.     
-Power simulation "scripts" were created by Christopher Hilton.
+Modified by Sein Jeung.    
+Stimuli creation was implemented by Sein Jeung.    
+Power simulation scripts were created by Christopher Hilton.
 
